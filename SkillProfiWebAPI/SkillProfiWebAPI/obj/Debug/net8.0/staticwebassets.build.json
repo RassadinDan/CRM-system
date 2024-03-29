@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x7JdVtpWvbmFomnnm4xTu4YDZpEIhtuE6EHM8EFn0kk=",
+  "Source": "SkillProfiWebAPI",
+  "BasePath": "_content/SkillProfiWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
