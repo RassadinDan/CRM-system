@@ -32,7 +32,7 @@ namespace SkillProfiWebAPI
 			services.AddDbContext<SkillProfiDBContext>(options =>
 			{
 				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-			});
+ 			});
 			services.AddScoped<IRepository, UserRepository>();
 			services.AddAuthentication(options =>
 			{

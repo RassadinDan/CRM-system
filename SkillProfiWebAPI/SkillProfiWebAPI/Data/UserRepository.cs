@@ -17,7 +17,7 @@ namespace SkillProfiWebAPI.Data
 		public UserRepository(SkillProfiDBContext dB, IConfiguration config)
 		{
 			_db = dB;
-			secretKey = config.GetValue<string>("ApiSettings:SecretKey");
+			secretKey = config.GetValue<string>("JwtSettings:SecretKey");
 		}
 		public bool IsUniqueUser(string username)
 		{
