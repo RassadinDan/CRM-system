@@ -24,11 +24,15 @@ namespace SkillProfiWebClient.Controllers
 			return View(new ApplicationRequest());
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> PostApplication([FromBody]ApplicationRequest model)
+		public async Task<IActionResult> PostApplication([FromForm]ApplicationRequest model)
 		{
 			var url = "https://localhost:7044/api/guest/postapplication";
-			var r = await _httpClient.PostAsJsonAsync(url, model);
+
+			var r = await _httpClient.PostAsync(
+				requestUri: url,
+				content: new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8,
+				mediaType: "application/json"));
+
 			if(r.IsSuccessStatusCode)
 			{
 				return RedirectToAction("Main", "Guest");

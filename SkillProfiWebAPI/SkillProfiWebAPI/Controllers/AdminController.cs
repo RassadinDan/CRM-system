@@ -26,7 +26,7 @@ namespace SkillProfiWebAPI.Controllers
 			}
 			catch(Exception ex)
 			{
-				return BadRequest(new {message = "Error while loading application list"});
+				return BadRequest(new {message = $"Error while loading application list: {ex.Message}"});
 			}
 		}
 	}

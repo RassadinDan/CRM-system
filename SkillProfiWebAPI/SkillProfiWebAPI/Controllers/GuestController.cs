@@ -21,6 +21,8 @@ namespace SkillProfiWebAPI.Controllers
 		[HttpPost("postapplication")]
 		public async Task<IActionResult> PostApplication([FromBody]ApplicationRequest model)
 		{
+			_logger.Log(LogLevel.Warning, $"{model.GetType}");
+			_logger.Log(LogLevel.Information, $"{model.Name}, {model.Text}, {model.Email}");
 			try
 			{ 
 				await _repository.CreateAsync(model.Name, model.Text, model.Email);
