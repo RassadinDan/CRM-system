@@ -1,0 +1,33 @@
+﻿@using ModelLibrary.Applications;
+@model ApplicationRequest;
+@{
+	ViewData["Title"] = "Главная";
+	Layout = "_Layout";
+}
+
+<html>
+	<head>
+
+	</head>
+	<body>
+		<h2 class="title">
+			@ViewData["Title"]
+		</h2>
+		@using(Html.BeginForm("PostApplication", "Guest", FormMethod.Post))
+		{
+			<div class="form-group">
+				@Html.LabelFor(model=>model.Name)
+				@Html.TextBoxFor(model=>model.Name, new{@class = "form-control"})
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model=>model.Text)
+				@Html.TextBoxFor(model=>model.Text, new{@class="form-control"})
+			</div>
+			<div class="form-control">
+				@Html.LabelFor(model=>model.Email)
+				@Html.TextBoxFor(model=>model.Email, new{@class="form-control"})
+			</div>
+			<button type="submit" class="btn btn-primary">Отправить</button>
+		}
+</body>
+</html>

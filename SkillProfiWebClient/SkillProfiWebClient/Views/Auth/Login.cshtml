@@ -1,0 +1,28 @@
+﻿@using ModelLibrary.Auth.Dto;
+@model LoginRequest
+@{
+	ViewData["Title"] = "Вход";
+	Layout = "_Layout";
+}
+<html>
+	<head>
+
+	</head>
+	<body>
+		<h2 class="title">
+			@ViewData["Title"]
+		</h2>
+		@using(Html.BeginForm("Login", "Auth", FormMethod.Post))
+		{
+			<div class="form-group">
+				@Html.LabelFor(model=>model.UserName)
+				@Html.TextBoxFor(model=>model.UserName, new{@class = "form-control"})
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model=>model.Password)
+				@Html.TextBoxFor(model=>model.Password, new{@class = "form-control"})
+			</div>
+			<button type="submit" class="btn btn-primary">Войти</button>
+		}
+	</body>
+</html>

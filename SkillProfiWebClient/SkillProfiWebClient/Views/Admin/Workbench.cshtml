@@ -1,0 +1,56 @@
+﻿@using ModelLibrary.Applications;
+@model IEnumerable<Application>
+@{
+	ViewData["Title"] = "Рабочий стол";
+	Layout = "_Layout";
+}
+
+<html>
+	<head>
+
+	</head>
+	<body>
+		<h2 class="title">
+			@ViewData["Title"]
+		</h2>
+		<table class="table">
+			<tr>
+				<th>
+					Номер заявки
+				</th>
+				<th>
+					Время заявки
+				</th>
+				<th>
+					Имя
+				</th>
+				<th>
+					Текст заявки
+				</th>
+				<th>
+					Контакты
+				</th>
+			</tr>
+			@foreach(var app in Model)
+			{
+				<tr>
+					<th>
+						@app.Id
+					</th>
+					<th>
+						@app.DateTime
+					</th>
+					<th>
+						@app.Name
+					</th>
+					<th>
+						@app.Text
+					</th>
+					<th>
+						@app.Email
+					</th>
+				</tr>
+			}
+		</table>
+	</body>
+</html>

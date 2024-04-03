@@ -6,6 +6,7 @@ using SkillProfiWebAPI.DataContext;
 using Microsoft.EntityFrameworkCore;
 using SkillProfiWebAPI.Interfaces;
 using SkillProfiWebAPI.Data;
+using ModelLibrary.Applications;
 
 namespace SkillProfiWebAPI
 {
@@ -32,7 +33,7 @@ namespace SkillProfiWebAPI
 			services.AddDbContext<SkillProfiDBContext>(options =>
 			{
 				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
- 			});
+			});
 			services.AddScoped<IRepository, UserRepository>();
 			services.AddAuthentication(options =>
 			{
@@ -47,10 +48,12 @@ namespace SkillProfiWebAPI
 						ValidateAudience = false,
 						ValidateLifetime = true,
 						ValidateIssuerSigningKey = true,
-						IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtSettings:SecretKey"]))
+						IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["JwtSettings:SecretKey"]))
 					};
 				});
 			services.AddAuthorization();
+			services.AddScoped<IApplicationRepository, ApplicationRepository>();
+			services.AddScoped<ApplicationFactory>();
 		}
 		public void Configure(IApplicationBuilder app)
 		{
