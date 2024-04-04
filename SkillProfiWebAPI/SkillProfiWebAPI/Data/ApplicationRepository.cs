@@ -22,15 +22,16 @@ namespace SkillProfiWebAPI.Data
 			await _db.SaveChangesAsync();
 		}
 
-		public async Task UpdateAsync(Application application, ApplicationStatus status)
+		public async Task UpdateStatusAsync(int id, ApplicationStatus status)
 		{
-			application.Status = status;
+			var app = _db.Applications.FirstOrDefault(a => a.Id == id);
+			app.Status = status;
 			await _db.SaveChangesAsync();
 		}
 
 		public async Task<IEnumerable<Application>> GetApplicationsAsync()
 		{
-			var list = _db.Applications.AsEnumerable<Application>();
+			var list =  _db.Applications.AsEnumerable<Application>();
 			return list;
 		}
 	}

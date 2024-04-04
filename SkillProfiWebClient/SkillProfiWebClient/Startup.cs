@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using ModelLibrary.Auth;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SkillProfiWebClient.Data;
 
 namespace SkillProfiWebClient
 {
@@ -17,6 +18,8 @@ namespace SkillProfiWebClient
 		{
 			services.AddControllersWithViews();
 			services.AddScoped<AuthService>();
+			services.AddScoped<AdminDataService>();
+			services.AddScoped<GuestDataService>();
 			services.AddHttpClient();
 			services.AddAuthentication(options =>
 			{

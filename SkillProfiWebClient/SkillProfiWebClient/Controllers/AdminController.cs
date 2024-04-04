@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Applications;
 using Newtonsoft.Json;
+using SkillProfiWebClient.Data;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 
@@ -11,12 +12,12 @@ namespace SkillProfiWebClient.Controllers
 	public class AdminController : Controller
 	{
 		private readonly ILogger<AdminController> _logger;
-		private readonly HttpClient _httpClient;
+		private readonly AdminDataService _adminDataService;
 
-		public AdminController(ILogger<AdminController> logger, HttpClient httpClient)
+		public AdminController(ILogger<AdminController> logger, AdminDataService dataService)
 		{
 			_logger = logger;
-			_httpClient = httpClient;
+			_adminDataService = dataService;
 		}
 
 		[HttpGet("workbench")]
@@ -26,10 +27,7 @@ namespace SkillProfiWebClient.Controllers
 			{
 				if (AuthSession.User.Role == "Administrator") 
 				{
-					var url = "https://localhost:7044/api/admin/getapplications";
-					var result = await _httpClient.GetStringAsync(url);
-					var model = JsonConvert.DeserializeObject<IEnumerable<Application>>(result);
-
+					var model = await _adminDataService.GetApplicationsAsync();
 					return View(model);
 				}
 				else
@@ -40,16 +38,30 @@ namespace SkillProfiWebClient.Controllers
 			return BadRequest(new { message = "Error while logging in" });
 		}
 
-
-		// TODO Сначала нужно разобраться с логикой обработки заявок
-		// (открпавки со стороны гостя, апдейта статуса со стороны админа), а потом уже можно
-		// разрабатывать логику остальных представлений.
+		[HttpPost("updateApplicationStatus/{id}")]
+		public async Task<IActionResult> UpdateApplicationStatus(int id, ApplicationStatus NewStatus)
+		{
+			var r = await _adminDataService.UpdateApplicationStatusAsync(id, NewStatus);
+			if(r)
+			{
+				return RedirectToAction("Workbench", "Admin");
+			}
+			else
+			{
+				return BadRequest(new { message = "Error while updating application status" });
+			}
+		}
 
 		[HttpGet]
 		public IActionResult Main()
 		{
 			return View();
 		}
+
+		// TODO Сначала нужно разобраться с логикой обработки заявок
+		// (открпавки со стороны гостя, апдейта статуса со стороны админа), а потом уже можно
+		// разрабатывать логику остальных представлений.
+
 
 		[HttpGet]
 		public IActionResult Projects() 

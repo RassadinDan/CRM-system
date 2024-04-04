@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|solutionrelative:skillprofiwebapi\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|solutionrelative:skillprofiwebapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\data\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|solutionrelative:skillprofiwebapi\\data\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|solutionrelative:skillprofiwebapi\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\interfaces\\iapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|solutionrelative:skillprofiwebapi\\interfaces\\iapplicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E7783D4-5A01-4981-9728-9EA141997A0A}|SkillProfiWebAPI\\SkillProfiWebAPI.csproj|d:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,19 +42,33 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "IApplicationRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Interfaces\\IApplicationRepository.cs",
+              "RelativeDocumentMoniker": "SkillProfiWebAPI\\Interfaces\\IApplicationRepository.cs",
+              "ToolTip": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Interfaces\\IApplicationRepository.cs",
+              "RelativeToolTip": "SkillProfiWebAPI\\Interfaces\\IApplicationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:55:42.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Controllers\\AdminController.cs",
               "RelativeToolTip": "SkillProfiWebAPI\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T09:05:55.831Z"
+              "WhenOpened": "2024-04-03T09:05:55.831Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GuestController.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Controllers\\GuestController.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\Controllers\\GuestController.cs",
@@ -63,19 +81,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ApplicationRepository.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Data\\ApplicationRepository.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\Data\\ApplicationRepository.cs",
               "ToolTip": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Data\\ApplicationRepository.cs",
               "RelativeToolTip": "SkillProfiWebAPI\\Data\\ApplicationRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T17:57:22.364Z"
+              "WhenOpened": "2024-04-02T17:57:22.364Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\Controllers\\AuthController.cs",
@@ -83,11 +102,12 @@
               "RelativeToolTip": "SkillProfiWebAPI\\Controllers\\AuthController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T20:26:25.395Z"
+              "WhenOpened": "2024-03-29T20:26:25.395Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SkillProfiDBContext.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\DataContext\\SkillProfiDBContext.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\DataContext\\SkillProfiDBContext.cs",
@@ -99,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Startup.cs",
               "DocumentMoniker": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\Startup.cs",
               "RelativeDocumentMoniker": "SkillProfiWebAPI\\Startup.cs",

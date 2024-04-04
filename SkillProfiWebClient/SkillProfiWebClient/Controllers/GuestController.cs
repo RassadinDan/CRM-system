@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Applications;
 using Newtonsoft.Json;
+using SkillProfiWebClient.Data;
 using System.Net.Http.Json;
 using System.Net.Mime;
 using System.Text;
@@ -10,12 +11,12 @@ namespace SkillProfiWebClient.Controllers
 	public class GuestController : Controller
 	{
 		private readonly ILogger<GuestController> _logger;
-		private readonly HttpClient _httpClient;
+		private readonly GuestDataService _guestDataService;
 
-		public GuestController(ILogger<GuestController> logger, HttpClient httpClient)
+		public GuestController(ILogger<GuestController> logger, GuestDataService dataService)
 		{
 			_logger = logger;
-			_httpClient = httpClient;
+			_guestDataService = dataService;
 		}
 
 		[HttpGet]
@@ -26,14 +27,8 @@ namespace SkillProfiWebClient.Controllers
 
 		public async Task<IActionResult> PostApplication([FromForm]ApplicationRequest model)
 		{
-			var url = "https://localhost:7044/api/guest/postapplication";
-
-			var r = await _httpClient.PostAsync(
-				requestUri: url,
-				content: new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8,
-				mediaType: "application/json"));
-
-			if(r.IsSuccessStatusCode)
+			var r = await _guestDataService.PostApplicationAsync(model);
+			if(r == true)
 			{
 				return RedirectToAction("Main", "Guest");
 			}

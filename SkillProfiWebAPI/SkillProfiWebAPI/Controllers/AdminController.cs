@@ -29,5 +29,12 @@ namespace SkillProfiWebAPI.Controllers
 				return BadRequest(new {message = $"Error while loading application list: {ex.Message}"});
 			}
 		}
+
+		[HttpPost("updateApplicationStatus/{id}")]
+		public async Task<IActionResult> UpdateApplicationStatus(int id, [FromBody]ApplicationStatus status)
+		{
+			await _repository.UpdateStatusAsync(id, status);
+			return Ok(new {message = "Status updated successfully"});
+		}
 	}
 }

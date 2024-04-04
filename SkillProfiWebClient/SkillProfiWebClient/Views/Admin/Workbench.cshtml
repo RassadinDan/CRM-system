@@ -4,14 +4,6 @@
 	ViewData["Title"] = "Рабочий стол";
 	Layout = "_Layout";
 }
-@functions
-{
-	void UpdateStatus(int id, ApplicationStatus status)
-	{
-		var app = Model.FirstOrDefault(u => u.Id == id);
-		app.Status = status;
-	}
-}
 
 <html>
 	<head>
@@ -41,29 +33,51 @@
 				<th>
 					Статус
 				</th>
+				<th></th>
 			</tr>
 			@foreach(var app in Model)
 			{
-				<tr>
-					<th>
-						@app.Id
-					</th>
-					<th>
-						@app.DateTime
-					</th>
-					<th>
-						@app.Name
-					</th>
-					<th>
-						@app.Text
-					</th>
-					<th>
-						@app.Email
-					</th>
-					<th>
-						@app.Status
-					</th>
-				</tr>
+				@using (Html.BeginForm($"UpdateApplicationStatus", "Admin", new { id = app.Id }, FormMethod.Post))
+				{
+					<tr>
+						<td>
+							@app.Id
+						</td>
+						<td>
+							@app.DateTime
+						</td>
+						<td>
+							@app.Name
+						</td>
+						<td>
+							@app.Text
+						</td>
+						<td>
+							@app.Email
+						</td>
+						<td>
+							<select name="NewStatus">
+								@foreach (var status in Enum.GetValues(typeof(ApplicationStatus)))
+								{
+									if(app.Status.ToString() == status.ToString())
+									{
+										<option value="@status.ToString()" selected>@status.ToString()</option>
+									}
+									else
+									{
+										<option value="@status.ToString()">@status.ToString()</option>
+									}
+								}								
+							</select>
+						</td>
+
+						<td>
+							<button type="submit" class="btn btn-primary">
+								Изменить статус
+							</button>
+						</td>
+					</tr>
+				}
 			}
 		</table>
 	</body>

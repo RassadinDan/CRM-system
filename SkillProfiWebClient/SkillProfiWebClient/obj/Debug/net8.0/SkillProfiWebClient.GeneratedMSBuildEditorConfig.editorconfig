@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Admin/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Admin/Workbench.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV29ya2JlbmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
