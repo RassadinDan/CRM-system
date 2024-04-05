@@ -1,5 +1,20 @@
-﻿
+﻿@using ModelLibrary.UISettings;
+@model MainSettings
 @{
-	ViewData["Title"] = "Главная"
-	Layout = "_Layout"
+	Layout = "_Layout";
 }
+<html>
+	<body>
+		<h1>
+			@ViewData["Title"]
+		</h1>
+
+		@using (Html.BeginForm("UpdateSettings", "Admin"))
+		{
+			<div>
+				@Html.TextBoxFor(model=>model.MainHeader, new{@class="form-control"})
+			</div>
+			<input type="submit" value="Редактировать"/>
+		}
+	</body>
+</html>

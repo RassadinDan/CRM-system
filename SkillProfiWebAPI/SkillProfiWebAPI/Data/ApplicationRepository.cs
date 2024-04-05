@@ -31,7 +31,7 @@ namespace SkillProfiWebAPI.Data
 
 		public async Task<IEnumerable<Application>> GetApplicationsAsync()
 		{
-			var list =  _db.Applications.AsEnumerable<Application>();
+			var list = _db.Applications.AsEnumerable<Application>();
 			return list;
 		}
 	}

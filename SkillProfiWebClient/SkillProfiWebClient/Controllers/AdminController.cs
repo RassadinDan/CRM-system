@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Applications;
+using ModelLibrary.UISettings;
 using Newtonsoft.Json;
 using SkillProfiWebClient.Data;
 using System.Net.Http.Json;
@@ -13,11 +14,15 @@ namespace SkillProfiWebClient.Controllers
 	{
 		private readonly ILogger<AdminController> _logger;
 		private readonly AdminDataService _adminDataService;
+		private readonly UISettingsManager _uiSettingsManager;
+		private MainSettings _settings;
 
-		public AdminController(ILogger<AdminController> logger, AdminDataService dataService)
+		public AdminController(ILogger<AdminController> logger, AdminDataService dataService, UISettingsManager settingsManager)
 		{
 			_logger = logger;
 			_adminDataService = dataService;
+			_uiSettingsManager = settingsManager;
+			_settings = _uiSettingsManager.GetSettings();
 		}
 
 		[HttpGet("workbench")]
@@ -52,15 +57,30 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpGet]
+		[HttpGet("main")]
 		public IActionResult Main()
 		{
-			return View();
+			ViewData["Title"] = _settings.MainHeader;
+			return View(_settings);
 		}
 
-		// TODO Сначала нужно разобраться с логикой обработки заявок
-		// (открпавки со стороны гостя, апдейта статуса со стороны админа), а потом уже можно
-		// разрабатывать логику остальных представлений.
+		[HttpPost("updateSettings")]
+		public async Task<IActionResult> UpdateSettings([FromForm]MainSettings newSettings)
+		{
+			var result = await _uiSettingsManager.UpdateSettings(newSettings);
+			if(result == true)
+			{
+				return RedirectToAction("Main", "Admin");
+			}
+			else
+			{
+				return BadRequest(new { message = "Error while updating settings" });
+			}
+		}
+
+
+		// TODO Задача: разобраться с обновлением пользовательского интерфейса через администраторскую логику
+		// класс для этого уже создан, логика API настроена, осталось теперь настроить это "на местах"
 
 
 		[HttpGet]

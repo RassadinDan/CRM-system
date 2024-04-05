@@ -41,3 +41,4 @@ D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\bin\Debug\
 D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\obj\Debug\net8.0\SkillProfiWebClient.sourcelink.json

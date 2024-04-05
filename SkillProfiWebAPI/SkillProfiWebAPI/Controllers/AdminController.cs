@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Applications;
+using ModelLibrary.UISettings;
+using SkillProfiWebAPI.Data;
 using SkillProfiWebAPI.Interfaces;
 
 namespace SkillProfiWebAPI.Controllers
@@ -10,10 +12,12 @@ namespace SkillProfiWebAPI.Controllers
 	public class AdminController : ControllerBase
 	{
 		private readonly IApplicationRepository _repository;
+		private readonly SettingsRepository _settings;
 
-		public AdminController(IApplicationRepository repository)
+		public AdminController(IApplicationRepository repository, SettingsRepository settingsRepository)
 		{
 			_repository = repository;
+			_settings = settingsRepository;
 		}
 
 		[HttpGet("getapplications")]
@@ -35,6 +39,27 @@ namespace SkillProfiWebAPI.Controllers
 		{
 			await _repository.UpdateStatusAsync(id, status);
 			return Ok(new {message = "Status updated successfully"});
+		}
+
+		[HttpGet("getSettings")]
+		public async Task<ActionResult<MainSettings>> GetSettings()
+		{
+			try
+			{
+				var settings = await _settings.GetSettingsAsync();
+				return Ok(settings);
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while loading UI settings: {ex.Message}" });
+			}
+		}
+
+		[HttpPost("updateSettings")]
+		public async Task<IActionResult> UpdateSettings([FromBody]MainSettings newSettings)
+		{
+			await _settings.UpdateSettingsAsync(newSettings);
+			return Ok(new { message = "Settings updated successfully" });
 		}
 	}
 }

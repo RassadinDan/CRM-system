@@ -54,6 +54,7 @@ namespace SkillProfiWebAPI
 			services.AddAuthorization();
 			services.AddScoped<IApplicationRepository, ApplicationRepository>();
 			services.AddScoped<ApplicationFactory>();
+			services.AddScoped<SettingsRepository>();
 		}
 		public void Configure(IApplicationBuilder app)
 		{

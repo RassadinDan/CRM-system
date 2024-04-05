@@ -137,3 +137,4 @@ D:\Work\Homework\FinalProject\SkillProfiWebAPI\SkillProfiWebAPI\obj\Debug\net8.0
 D:\Work\Homework\FinalProject\SkillProfiWebAPI\SkillProfiWebAPI\obj\Debug\net8.0\ref\SkillProfiWebAPI.dll
 D:\Work\Homework\FinalProject\SkillProfiWebAPI\SkillProfiWebAPI\bin\Debug\net8.0\ModelLibrary.dll
 D:\Work\Homework\FinalProject\SkillProfiWebAPI\SkillProfiWebAPI\bin\Debug\net8.0\ModelLibrary.pdb
+D:\Work\Homework\FinalProject\SkillProfiWebAPI\SkillProfiWebAPI\obj\Debug\net8.0\SkillProfiWebAPI.sourcelink.json

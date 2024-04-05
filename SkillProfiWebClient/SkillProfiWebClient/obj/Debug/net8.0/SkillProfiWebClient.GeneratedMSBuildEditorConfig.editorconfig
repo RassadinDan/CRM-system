@@ -34,8 +34,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcQmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcTWFpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/Error.cshtml]
