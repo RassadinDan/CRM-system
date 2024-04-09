@@ -9,10 +9,46 @@
 			@ViewData["Title"]
 		</h1>
 
+
+
+
+		<h2 class="title">
+			@ViewData["Title"]
+		</h2>
+		@using(Html.BeginForm("PostApplication", "Guest", FormMethod.Post))
+		{
+			<div class="form-group">
+				@Html.Label("Имя")
+				@Html.TextBox("Name", new{@class = "form-control"})
+			</div>
+			<div class="form-group">
+				@Html.Label("Текст заявки")
+				@Html.TextBox("Text", new{@class="form-control"})
+			</div>
+			<div class="form-group">
+				@Html.Label("Email")
+				@Html.TextBox("Email", new{@class="form-control"})
+			</div>
+			<button type="submit" class="btn btn-primary" style="display:none">Отправить</button>
+		}
+
+
 		@using (Html.BeginForm("UpdateSettings", "Admin"))
 		{
-			<div>
+			<div class="form-group">
 				@Html.TextBoxFor(model=>model.MainHeader, new{@class="form-control"})
+			</div>
+			<div class="form-group">
+				@Html.TextBoxFor(model=>model.ProjectsHeader, new{@class="form-control"})
+			</div>
+			<div class="form-group">
+				@Html.TextBoxFor(model=>model.ServicesHeader, new{@class="form-control"})
+			</div>
+			<div class="form-group">
+				@Html.TextBoxFor(model=>model.BlogHeader, new{@class="form-control"})
+			</div>
+			<div class="form-group">
+				@Html.TextBoxFor(model=>model.ContactsHeader, new{@class="form-control"})
 			</div>
 			<input type="submit" value="Редактировать"/>
 		}

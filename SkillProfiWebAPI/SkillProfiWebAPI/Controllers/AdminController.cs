@@ -20,7 +20,7 @@ namespace SkillProfiWebAPI.Controllers
 			_settings = settingsRepository;
 		}
 
-		[HttpGet("getapplications")]
+		[HttpGet("getApplications")]
 		public async Task<ActionResult<IEnumerable<Application>>> GetApplications()
 		{
 			try
@@ -37,8 +37,15 @@ namespace SkillProfiWebAPI.Controllers
 		[HttpPost("updateApplicationStatus/{id}")]
 		public async Task<IActionResult> UpdateApplicationStatus(int id, [FromBody]ApplicationStatus status)
 		{
-			await _repository.UpdateStatusAsync(id, status);
-			return Ok(new {message = "Status updated successfully"});
+			try
+			{
+				await _repository.UpdateStatusAsync(id, status);
+				return Ok(new {message = "Status updated successfully"});
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while updating application status: {ex.Message}" });
+			}
 		}
 
 		[HttpGet("getSettings")]
@@ -58,8 +65,15 @@ namespace SkillProfiWebAPI.Controllers
 		[HttpPost("updateSettings")]
 		public async Task<IActionResult> UpdateSettings([FromBody]MainSettings newSettings)
 		{
-			await _settings.UpdateSettingsAsync(newSettings);
-			return Ok(new { message = "Settings updated successfully" });
+			try
+			{
+				await _settings.UpdateSettingsAsync(newSettings);
+				return Ok(new { message = "Settings updated successfully" });
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(new { message = $"Error while updating UI settings: {ex.Message}" });
+			}
 		}
 	}
 }

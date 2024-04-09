@@ -18,7 +18,7 @@ namespace SkillProfiWebAPI.Controllers
 			_logger = logger;
 		}
 
-		[HttpPost("postapplication")]
+		[HttpPost("postApplication")]
 		public async Task<IActionResult> PostApplication([FromBody]ApplicationRequest model)
 		{
 			_logger.Log(LogLevel.Warning, $"{model.GetType}");

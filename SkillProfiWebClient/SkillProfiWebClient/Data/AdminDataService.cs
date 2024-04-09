@@ -14,7 +14,7 @@ namespace SkillProfiWebClient.Data
 
 		public async Task<IEnumerable<Application>> GetApplicationsAsync()
 		{
-			var url = "https://localhost:7044/api/admin/getapplications";
+			var url = "https://localhost:7044/api/admin/getApplications";
 			var result = await _httpClient.GetStringAsync(url);
 			var model = JsonConvert.DeserializeObject<IEnumerable<Application>>(result);
 			return model;
