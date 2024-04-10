@@ -28,6 +28,20 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		[HttpGet("getone/{id}")]
+		public async Task<ActionResult<Blog>> GetById(int id)
+		{
+			try
+			{
+				var blog = await _blogDataService.GetByIdAsync(id);
+				return Ok(blog);
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while loading blog: {ex.Message}" });
+			}
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateBlog(BlogModel model)
 		{

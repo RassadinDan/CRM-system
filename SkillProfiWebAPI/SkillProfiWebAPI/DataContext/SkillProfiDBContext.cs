@@ -3,6 +3,8 @@ using ModelLibrary.Auth;
 using ModelLibrary.Applications;
 using ModelLibrary.UISettings;
 using ModelLibrary.Blogs;
+using ModelLibrary.Services;
+using ModelLibrary.Projects;
 
 namespace SkillProfiWebAPI.DataContext
 {
@@ -12,6 +14,8 @@ namespace SkillProfiWebAPI.DataContext
 		public DbSet<Application> Applications { get; set; }
 		public DbSet<MainSettings> MainSettings { get; set; }
 		public DbSet<Blog> Blogs { get; set; }
+		public DbSet<Service> Services { get; set; }
+		public DbSet<Project> Projects { get; set; }
 		public SkillProfiDBContext(DbContextOptions options):base(options) {}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,6 +24,8 @@ namespace SkillProfiWebAPI.DataContext
 			modelBuilder.Entity<Application>(options => options.HasKey("Id"));
 			modelBuilder.Entity<MainSettings>(options => options.HasKey("LayoutHeader"));
 			modelBuilder.Entity<Blog>(options => options.HasKey("Id"));
+			modelBuilder.Entity<Service>(options => options.HasKey("Id"));
+			modelBuilder.Entity<Project>(options => options.HasKey("Id"));
 		}
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

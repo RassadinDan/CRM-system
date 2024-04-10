@@ -20,6 +20,15 @@ namespace SkillProfiWebClient.Data
 			return blogs;
 		}
 
+
+		public  async Task<Blog> GetByIdAsync(int id)
+		{
+			var url = $"https://localhost:7044/api/blog/getById/{id}";
+			var result = await _httpClient.GetStringAsync(url);
+			var blog = JsonConvert.DeserializeObject<Blog>(result);
+			return blog;
+		}
+
 		public async Task<bool> CreateBlogAsync(BlogModel model)
 		{
 			var url = "https://localhost:7044/api/blog/createBlog";

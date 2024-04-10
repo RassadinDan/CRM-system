@@ -1,5 +1,6 @@
 ﻿using SkillProfiWebAPI.DataContext;
 using ModelLibrary.Blogs;
+using Microsoft.EntityFrameworkCore;
 
 namespace SkillProfiWebAPI.Data
 {
@@ -17,6 +18,12 @@ namespace SkillProfiWebAPI.Data
 			var blogs = _db.Blogs.AsEnumerable();
 			await Task.CompletedTask;
 			return blogs;
+		}
+
+		public async Task<Blog> GetBlogByIdAsync(int id)
+		{
+			var blog = await _db.Blogs.FirstOrDefaultAsync(b=> b.Id == id);
+			return blog;
 		}
 
 		public async Task CreateBlogAsync(BlogModel model)
@@ -39,6 +46,26 @@ namespace SkillProfiWebAPI.Data
 			}
 			_db.Blogs.Add(blog);
 			_db.SaveChanges();
+		}
+
+		public async Task UpdateBlogAsync(int id, BlogModel model)
+		{
+			var blog = await _db.Blogs.FirstOrDefaultAsync(b=>b.Id == id);
+			blog.Name = model.Name;
+			blog.Preview = model.Preview;
+			blog.Description = model.Description;
+
+			if (model.ImageFile != null)
+			{
+				using (var memoryStream = new MemoryStream())
+				{
+					await model.ImageFile.CopyToAsync(memoryStream);
+					blog.ImageData = memoryStream.ToArray();
+					blog.ImageContentType = model.ImageFile.ContentType;
+				}
+			}
+			_db.SaveChanges();
+
 		}
 
 		public async Task DeleteBlogAsync(int id)

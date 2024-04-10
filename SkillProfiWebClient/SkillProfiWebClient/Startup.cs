@@ -21,6 +21,8 @@ namespace SkillProfiWebClient
 			services.AddScoped<AdminDataService>();
 			services.AddScoped<GuestDataService>();
 			services.AddScoped<UISettingsManager>();
+			services.AddScoped<BlogDataService>();
+			services.AddScoped<ServiceDataService>();
 			services.AddHttpClient();
 			services.AddAuthentication(options =>
 			{

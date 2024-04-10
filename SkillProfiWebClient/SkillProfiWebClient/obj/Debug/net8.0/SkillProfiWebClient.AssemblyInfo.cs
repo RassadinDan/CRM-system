@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkillProfiWebClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7aa4f0f378717141fd48ce38af75a0ad5a6c36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09cf130596843e47da5810600b92650025abfcd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkillProfiWebClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkillProfiWebClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

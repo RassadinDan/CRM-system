@@ -30,6 +30,20 @@ namespace SkillProfiWebAPI.Controllers
 			}
 		}
 
+		[HttpGet("getById/{id}")]
+		public async Task<ActionResult<Blog>> GetBlogById(int id)
+		{
+			try
+			{
+				var blog = await _blogRepository.GetBlogByIdAsync(id);
+				return Ok(blog);
+			}
+			catch(Exception ex) 
+			{
+				return NotFound(new { message = $"Error while loading blog: {ex.Message}" });
+			}
+		}
+
 		[HttpPost("createBlog")]
 		public async Task<IActionResult> CreateBlog([FromBody]BlogModel model)
 		{
@@ -41,6 +55,20 @@ namespace SkillProfiWebAPI.Controllers
 			catch(Exception ex)
 			{
 				return BadRequest(new { message = $"Error while creating blog: {ex.Message}" });
+			}
+		}
+
+		[HttpPut("updateBlog/{id}")]
+		public async Task<IActionResult> UpdateBlog(int id, [FromBody]BlogModel model)
+		{
+			try
+			{
+				await _blogRepository.UpdateBlogAsync(id, model);
+				return Ok(new { message = "Blog update successfully" });
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new {message = $"Error while updating blog: {ex.Message}"});
 			}
 		}
 
