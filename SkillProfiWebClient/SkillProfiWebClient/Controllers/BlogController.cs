@@ -38,35 +38,49 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch(Exception ex)
 			{
-				return BadRequest(new { message = $"Error while loading blog: {ex.Message}" });
+				return BadRequest(new { message = $"Error while loading a blog: {ex.Message}" });
 			}
 		}
 
 		[HttpPost("create")]
-		public async Task<IActionResult> CreateBlog(BlogModel model)
+		public async Task<IActionResult> CreateBlog([FromForm]BlogModel model)
 		{
-			var result = await _blogDataService.CreateBlogAsync(model);
-			if(result)
-			{
+			try
+			{ 
+				await _blogDataService.CreateBlogAsync(model);
 				return Ok();
 			}
-			else
+			catch (Exception ex)
 			{
-				return BadRequest(new { message = "Error while creating a blog" });
+				return BadRequest(new { message = $"Error while creating a blog: {ex.Message}" });
+			}
+		}
+
+		[HttpPut("update/{id}")]
+		public async Task<IActionResult> UpdateBlog(int id, [FromForm] BlogModel model)
+		{
+			try
+			{
+				await _blogDataService.UpdateBlogAsync(id, model);
+				return Ok();
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while updating a blog: {ex.Message}" });
 			}
 		}
 
 		[HttpDelete("delete/{id}")]
 		public async Task<IActionResult> DeleteBlog(int id)
 		{
-			var result = await _blogDataService.DeleteBlogAsync(id);
-			if(result)
-			{
+			try
+			{ 
+				var result = await _blogDataService.DeleteBlogAsync(id);
 				return Ok();
 			}
-			else
+			catch(Exception ex)
 			{
-				return NotFound();
+				return BadRequest(new {message=$"Error while deleting a blog: {ex.Message}"});
 			}
 		}
 	}

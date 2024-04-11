@@ -41,7 +41,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPost("createProject")]
+		[HttpPost("create")]
 		public async Task<IActionResult> CreateProject([FromForm]ProjectModel model)
 		{
 			try
@@ -55,7 +55,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPut("updateProject/{id}")]
+		[HttpPut("update/{id}")]
 		public async Task<IActionResult> UpdateProject(int id, [FromForm]ProjectModel model)
 		{
 			try
@@ -69,7 +69,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpDelete("deleteProject/{id}")]
+		[HttpDelete("delete/{id}")]
 		public async Task<IActionResult> DeleteProject(int id)
 		{
 			try

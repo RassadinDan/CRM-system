@@ -17,7 +17,7 @@ namespace SkillProfiWebAPI.Data
 
 		public async Task<IEnumerable<Project>> GetProjectsAsync()
 		{
-			var projects = _db.Projects.AsEnumerable<Project>();
+			var projects = _db.Projects.AsEnumerable();
 			await Task.CompletedTask;
 			return projects;
 		}

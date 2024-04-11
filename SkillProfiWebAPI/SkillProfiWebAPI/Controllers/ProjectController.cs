@@ -44,7 +44,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("createProject")]
-		public async Task<IActionResult> CreateProject(ProjectModel model)
+		public async Task<IActionResult> CreateProject([FromBody]ProjectModel model)
 		{
 			try
 			{

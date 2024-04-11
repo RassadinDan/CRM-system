@@ -23,7 +23,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch (Exception ex)
 			{
-				return BadRequest(ex.Message);
+				return BadRequest(new { message = $"Error while loading services: {ex.Message}"});
 			}
 		}
 
@@ -37,11 +37,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch (Exception ex)
 			{
-				return NotFound();
+				return BadRequest(new {message =$"Error while loading a service: {ex.Message}"});
 			}
 		}
 
-		[HttpPost("createService")]
+		[HttpPost("create")]
 		public async Task<IActionResult> CreateService([FromForm]ServiceModel model)
 		{
 			try
@@ -51,11 +51,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch (Exception ex)
 			{
-				return BadRequest(ex.Message);
+				return BadRequest(new {message = $"Error while creating a service: {ex.Message}"});
 			}
 		}
 
-		[HttpPut("updateService/{id}")]
+		[HttpPut("update/{id}")]
 		public async Task<IActionResult> UpdateService(int id, [FromBody] ServiceModel model)
 		{
 			try
@@ -65,11 +65,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch (Exception ex)
 			{
-				return BadRequest(ex.Message);
+				return BadRequest(new {message=$"Error while updating a service: {ex.Message}"});
 			}
 		}
 
-		[HttpDelete("deleteService/{id}")]
+		[HttpDelete("delete/{id}")]
 		public async Task<IActionResult> DeleteService(int id)
 		{
 			try
@@ -79,7 +79,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 			catch(Exception ex)
 			{
-				return BadRequest(ex.Message);
+				return BadRequest(new {message = $"Error while deleting a service: {ex.Message}"});
 			}
 		}
 	}

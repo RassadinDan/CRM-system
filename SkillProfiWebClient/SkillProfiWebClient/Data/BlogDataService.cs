@@ -43,6 +43,20 @@ namespace SkillProfiWebClient.Data
 			}
 		}
 
+		public async Task<bool> UpdateBlogAsync(int id, BlogModel model)
+		{
+			var url = $"https://localhost:7044/api/blog/updateBlog/{id}";
+			var result = await _httpClient.PutAsJsonAsync(url, model);
+			if(result.IsSuccessStatusCode)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 		public async Task<bool> DeleteBlogAsync(int id)
 		{
 			var url = $"https://localhost:7044/api/blog/deleteBlog/{id}";
