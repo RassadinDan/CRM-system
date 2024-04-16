@@ -4,6 +4,7 @@ using ModelLibrary.Contacts;
 
 namespace SkillProfiWebClient.Controllers
 {
+	[Route("[controller]")]
 	public class ContactController : Controller
 	{
 		private readonly ContactDataService _contactData;
@@ -19,7 +20,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var contacts = await _contactData.GetContactsAsync();
-				return Ok(contacts);
+				return View(contacts);
 			}
 			catch(Exception ex)
 			{

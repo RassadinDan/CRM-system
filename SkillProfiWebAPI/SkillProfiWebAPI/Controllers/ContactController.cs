@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using ModelLibrary.Contacts;
@@ -46,6 +47,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("createContact")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> CreateContact([FromBody]ContactModel model)
 		{
 			try
@@ -60,6 +62,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPut("updateContact/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> UpdateContact(int id, [FromBody]ContactModel model)
 		{
 			try
@@ -74,6 +77,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpDelete("deleteContact/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> DeleteContact(int id)
 		{
 			try

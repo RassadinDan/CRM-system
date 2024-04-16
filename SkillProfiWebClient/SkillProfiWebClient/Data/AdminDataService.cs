@@ -7,9 +7,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public AdminDataService(HttpClient httpClient)
+		public AdminDataService(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public async Task<IEnumerable<Application>> GetApplicationsAsync()

@@ -15,14 +15,14 @@ namespace SkillProfiWebClient.Controllers
 		private readonly ILogger<AdminController> _logger;
 		private readonly AdminDataService _adminDataService;
 		private readonly UISettingsManager _uiSettingsManager;
-		private MainSettings _settings;
+		//private MainSettings _settings;
 
 		public AdminController(ILogger<AdminController> logger, AdminDataService dataService, UISettingsManager settingsManager)
 		{
 			_logger = logger;
 			_adminDataService = dataService;
 			_uiSettingsManager = settingsManager;
-			_settings = _uiSettingsManager.GetSettings();
+			//_settings = _uiSettingsManager.GetSettings();
 		}
 
 		[HttpGet("workbench")]
@@ -57,12 +57,12 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpGet("main")]
-		public IActionResult Main()
-		{
-			ViewData["Title"] = _settings.MainHeader;
-			return View(_settings);
-		}
+		//[HttpGet("main")]
+		//public IActionResult Main()
+		//{
+		//	ViewData["Title"] = _settings.MainHeader;
+		//	return View(_settings);
+		//}
 
 		[HttpPost("updateSettings")]
 		public async Task<IActionResult> UpdateSettings([FromForm]MainSettings newSettings)
@@ -83,6 +83,7 @@ namespace SkillProfiWebClient.Controllers
 		// класс для этого уже создан, логика API настроена, осталось теперь настроить это "на местах".
 		// Итак, у меня есть две огромные папки с контроллерами, оборудованными для создания, обновления, удаления и получения любой модели.
 		// Теперь мне необходимо разделить оставшуюся логику по ролям. Этот контроллер для администраторов, у них больше доступных функций.
+		
 
 
 		[HttpGet]
@@ -90,6 +91,9 @@ namespace SkillProfiWebClient.Controllers
 		{
 			return View();
 		}
+
+
+		// Ну и вот сюда тоже нужно сделать редирект. Или отсюда \:
 
 		[HttpGet]
 		public IActionResult Services() 
@@ -103,10 +107,13 @@ namespace SkillProfiWebClient.Controllers
 			return View();
 		}
 
+		// А вот теперь главный вопрос: а как мне реализовать этот замечательный переход из одного контроллера в другой.
+		// Как это делается я в курсе, тут все понятно)) не понятно, что именно я хочу от этого всего, не понятен ВЕСЬ путь, который нужно проделать.
+
 		[HttpGet]
 		public IActionResult Contacts() 
 		{
-			return View();
+			return RedirectToAction("GetContacts", "Contact");
 		}
 	}
 }

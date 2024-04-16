@@ -1,0 +1,26 @@
+﻿@using ModelLibrary.Contacts;
+
+@model IEnumerable<Contact>
+@{
+	Layout = "_Layout";
+}
+
+<html>
+	<body>
+		<h2></h2>
+		<div>
+		@foreach (Contact c in Model)
+		{
+			<p>
+				@c.Name
+			</p>
+			<p>
+				@c.Address
+			</p>
+			<p>
+				@c.Email
+			</p>
+		}
+		</div>
+	</body>
+</html>

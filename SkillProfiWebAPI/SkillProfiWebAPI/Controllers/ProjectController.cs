@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Projects;
 using SkillProfiWebAPI.Data;
@@ -16,6 +17,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getall")]
+		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<IEnumerable<Project>>> GetProjects()
 		{
 			try
@@ -30,6 +32,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getone/{id}")]
+		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<Project>> GetProjectById(int id)
 		{
 			try
@@ -44,6 +47,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("createProject")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> CreateProject([FromBody]ProjectModel model)
 		{
 			try
@@ -58,6 +62,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPut("updateProject/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> UpdateProject(int id, [FromBody]ProjectModel model)
 		{
 			try
@@ -72,6 +77,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpDelete("deleteProject/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> DeleteProject(int id)
 		{
 			try

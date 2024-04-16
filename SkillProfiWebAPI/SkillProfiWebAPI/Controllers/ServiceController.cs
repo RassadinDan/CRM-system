@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Services;
 using SkillProfiWebAPI.Data;
@@ -17,6 +18,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getall")]
+		[Authorize(Roles ="Guest, Administrator")]
 		public async Task<ActionResult<IEnumerable<Service>>> GetServices()
 		{
 			try
@@ -31,6 +33,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getById/{id}")]
+		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<Service>> GetServiceById(int id)
 		{
 			try
@@ -45,6 +48,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("createService")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> CreateService([FromBody]ServiceModel model)
 		{
 			try
@@ -59,6 +63,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPut("updateService/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> UpdateService(int id, [FromBody]ServiceModel model)
 		{
 			try
@@ -73,6 +78,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpDelete("deleteService/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> DeleteService(int id)
 		{
 			try

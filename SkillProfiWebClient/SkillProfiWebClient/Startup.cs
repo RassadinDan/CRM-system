@@ -4,6 +4,7 @@ using ModelLibrary.Auth;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using SkillProfiWebClient.Data;
+using System.Net.Http.Headers;
 
 namespace SkillProfiWebClient
 {
@@ -23,7 +24,11 @@ namespace SkillProfiWebClient
 			services.AddScoped<UISettingsManager>();
 			services.AddScoped<BlogDataService>();
 			services.AddScoped<ServiceDataService>();
-			services.AddHttpClient();
+			services.AddScoped<ContactDataService>();
+			services.AddHttpClient("AuthorizedClient", client=>
+			{
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
+			});
 			services.AddAuthentication(options =>
 			{
 				options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;

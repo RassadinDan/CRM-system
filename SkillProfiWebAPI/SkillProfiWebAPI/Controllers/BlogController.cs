@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLibrary.Blogs;
 using SkillProfiWebAPI.Data;
@@ -17,6 +18,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getBlogs")]
+		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<IEnumerable<Blog>>> GetBlogs()
 		{
 			try
@@ -31,6 +33,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getById/{id}")]
+		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<Blog>> GetBlogById(int id)
 		{
 			try
@@ -45,6 +48,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("createBlog")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> CreateBlog([FromBody]BlogModel model)
 		{
 			try
@@ -59,6 +63,7 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPut("updateBlog/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> UpdateBlog(int id, [FromBody]BlogModel model)
 		{
 			try
@@ -68,11 +73,12 @@ namespace SkillProfiWebAPI.Controllers
 			}
 			catch(Exception ex)
 			{
-				return BadRequest(new {message = $"Error while updating blog: {ex.Message}"});
+				return BadRequest(new {message = $"Error while updating blog: {ex.Message}"}) ;
 			}
 		}
 
 		[HttpDelete("deleteBlog/{id}")]
+		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> DeleteBlog(int id)
 		{
 			try

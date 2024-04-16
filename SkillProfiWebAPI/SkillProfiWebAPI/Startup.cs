@@ -48,10 +48,15 @@ namespace SkillProfiWebAPI
 						ValidateAudience = false,
 						ValidateLifetime = true,
 						ValidateIssuerSigningKey = true,
-						IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["JwtSettings:SecretKey"]))
+						IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["JwtSettings:SecretKey"])),
+						ClockSkew = TimeSpan.Zero
 					};
 				});
-			services.AddAuthorization();
+			services.AddAuthorization(options=>
+			{
+				//options.AddPolicy("RequireAdministratorRole", policy => policy.RequireClaim("role", "Administrator"));
+				//options.AddPolicy("RequireGuestRole", policy => policy.RequireClaim("role", "Guest"));
+			});
 			services.AddScoped<IApplicationRepository, ApplicationRepository>();
 			services.AddScoped<ApplicationFactory>();
 			services.AddScoped<SettingsRepository>();
@@ -59,6 +64,7 @@ namespace SkillProfiWebAPI
 			services.AddScoped<ServiceRepository>();
 			services.AddScoped<ContactRepository>();
 		}
+		
 		public void Configure(IApplicationBuilder app)
 		{
 			app.UseHttpsRedirection();

@@ -7,9 +7,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public UISettingsManager(HttpClient httpClient)
+		public UISettingsManager(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public MainSettings GetSettings()

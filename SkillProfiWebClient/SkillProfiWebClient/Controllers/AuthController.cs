@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 using ModelLibrary.Auth.Dto;
 using ModelLibrary.Auth;
 
@@ -20,6 +21,9 @@ namespace SkillProfiWebClient.Controllers
 			return View(new LoginRequest());
 		}
 
+
+		// TODO Несмотря на все старания, авторизация после входа не работает, код 403 (Forbidden)
+
 		[HttpPost]
 		public async Task<IActionResult> Login(LoginRequest model)
 		{
@@ -30,6 +34,7 @@ namespace SkillProfiWebClient.Controllers
 				AuthSession.User = r.User;
 				AuthSession.Token = r.Token;
 				AuthSession.IsAuthenticated = true;
+				//_authService._httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
 				if (AuthSession.User.Role == "Administrator")
 				{
 					return RedirectToAction("Workbench", "Admin");

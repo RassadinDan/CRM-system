@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e99f44a368e517019ada82ef1e975703b4db2f94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40210db77e7383e5094683a7f9d6fb7e60e97b46")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
