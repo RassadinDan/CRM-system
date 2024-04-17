@@ -41,6 +41,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		public IActionResult ServiceForm()
+		{
+			return View(new ServiceModel());
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateService([FromForm]ServiceModel model)
 		{

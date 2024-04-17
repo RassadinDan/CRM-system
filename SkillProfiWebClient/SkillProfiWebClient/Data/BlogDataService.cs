@@ -1,5 +1,6 @@
 ﻿using ModelLibrary.Blogs;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace SkillProfiWebClient.Data
 {
@@ -7,9 +8,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public BlogDataService(HttpClient httpClient)
+		public BlogDataService(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public async Task<IEnumerable<Blog>> GetBlogsAsync()
@@ -32,14 +33,29 @@ namespace SkillProfiWebClient.Data
 		public async Task<bool> CreateBlogAsync(BlogModel model)
 		{
 			var url = "https://localhost:7044/api/blog/createBlog";
-			var result = await _httpClient.PostAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
+			var memoryStream = new MemoryStream();
+			await model.ImageFile.CopyToAsync(memoryStream);
+			var fileBytes = memoryStream.ToArray();
+			var fileContent = new ByteArrayContent(fileBytes);
+			fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
+
+			using (var formData = new MultipartFormDataContent())
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				formData.Add(new StringContent(model.Name), "Name");
+				formData.Add(new StringContent(model.Preview), "Preview");
+				formData.Add(new StringContent(model.Description), "Description");
+				formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+
+				var result = await _httpClient.PostAsync(url, formData);
+				memoryStream.Dispose();
+				if (result.IsSuccessStatusCode)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
 			}
 		}
 

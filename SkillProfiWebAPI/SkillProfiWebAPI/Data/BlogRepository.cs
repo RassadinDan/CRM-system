@@ -45,7 +45,7 @@ namespace SkillProfiWebAPI.Data
 				}
 			}
 			_db.Blogs.Add(blog);
-			_db.SaveChanges();
+			await _db.SaveChangesAsync();
 		}
 
 		public async Task UpdateBlogAsync(int id, BlogModel model)

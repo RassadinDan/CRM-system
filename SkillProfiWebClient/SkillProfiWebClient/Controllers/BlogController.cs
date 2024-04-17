@@ -42,6 +42,12 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		[HttpGet("createform")]
+		public IActionResult Create()
+		{
+			return View(new BlogModel());
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateBlog([FromForm]BlogModel model)
 		{

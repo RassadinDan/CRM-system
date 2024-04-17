@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using SkillProfiWebClient.Data;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
+using ModelLibrary.Projects;
+
 
 namespace SkillProfiWebClient.Controllers
 {
@@ -56,6 +58,7 @@ namespace SkillProfiWebClient.Controllers
 				return BadRequest(new { message = "Error while updating application status" });
 			}
 		}
+
 
 		//[HttpGet("main")]
 		//public IActionResult Main()

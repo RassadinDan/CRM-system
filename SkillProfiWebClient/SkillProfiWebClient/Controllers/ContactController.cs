@@ -42,6 +42,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		public IActionResult ContactForm()
+		{
+			return View(new ContactModel());
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateContact([FromForm]ContactModel model)
 		{

@@ -41,6 +41,11 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		public IActionResult ProjectForm()
+		{
+			return View(new ProjectModel());
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateProject([FromForm]ProjectModel model)
 		{
