@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "3vZ1lNCcxY+tPCgG4qwullV2HoJrfl4tW59u6lV+rFBbt32Kv5+teD7G34gQmtdWnlD36JyO8yJWlHmTHdHWuw==",
+  "success": true,
+  "projectFilePath": "D:\\Work\\Homework\\FinalProject\\SkillProfiDesctopClient\\SkillProfiDesctopClient\\SkillProfiDesctopClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Данька\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Данька\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Данька\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Данька\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Данька\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

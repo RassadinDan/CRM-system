@@ -33,28 +33,30 @@ namespace SkillProfiWebClient.Data
 		public async Task<bool> CreateBlogAsync(BlogModel model)
 		{
 			var url = "https://localhost:7044/api/blog/createBlog";
-			var memoryStream = new MemoryStream();
-			await model.ImageFile.CopyToAsync(memoryStream);
-			var fileBytes = memoryStream.ToArray();
-			var fileContent = new ByteArrayContent(fileBytes);
-			fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
 
-			using (var formData = new MultipartFormDataContent())
+			using (var memoryStream = new MemoryStream())
 			{
-				formData.Add(new StringContent(model.Name), "Name");
-				formData.Add(new StringContent(model.Preview), "Preview");
-				formData.Add(new StringContent(model.Description), "Description");
-				formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+				await model.ImageFile.CopyToAsync(memoryStream);
+				var fileBytes = memoryStream.ToArray();
+				var fileContent = new ByteArrayContent(fileBytes);
+				fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
 
-				var result = await _httpClient.PostAsync(url, formData);
-				memoryStream.Dispose();
-				if (result.IsSuccessStatusCode)
+				using (var formData = new MultipartFormDataContent())
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					formData.Add(new StringContent(model.Name ?? string.Empty), "Name");
+					formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
+					formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
+					formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+
+					var result = await _httpClient.PostAsync(url, formData);
+					if (result.IsSuccessStatusCode)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
 				}
 			}
 		}
@@ -62,14 +64,31 @@ namespace SkillProfiWebClient.Data
 		public async Task<bool> UpdateBlogAsync(int id, BlogModel model)
 		{
 			var url = $"https://localhost:7044/api/blog/updateBlog/{id}";
-			var result = await _httpClient.PutAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
+			
+			using (var memoryStream = new MemoryStream())
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				await model.ImageFile.CopyToAsync(memoryStream);
+				var fileBytes = memoryStream.ToArray();
+				var fileContent = new ByteArrayContent(fileBytes);
+				fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
+
+				using (var formData = new MultipartFormDataContent())
+				{
+					formData.Add(new StringContent(model.Name ?? string.Empty), "Name");
+					formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
+					formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
+					formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+
+					var result = await _httpClient.PutAsync(url, formData);
+					if (result.IsSuccessStatusCode)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
 			}
 		}
 

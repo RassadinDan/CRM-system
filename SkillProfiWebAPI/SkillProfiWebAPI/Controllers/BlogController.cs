@@ -49,7 +49,8 @@ namespace SkillProfiWebAPI.Controllers
 
 		[HttpPost("createBlog")]
 		[Authorize(Roles = "Administrator")]
-		public async Task<IActionResult> CreateBlog([FromBody]BlogModel model)
+		[Consumes("multipart/form-data")]
+		public async Task<IActionResult> CreateBlog([FromForm]BlogModel model)
 		{
 			try
 			{
@@ -64,7 +65,8 @@ namespace SkillProfiWebAPI.Controllers
 
 		[HttpPut("updateBlog/{id}")]
 		[Authorize(Roles = "Administrator")]
-		public async Task<IActionResult> UpdateBlog(int id, [FromBody]BlogModel model)
+		[Consumes("multipart/form-data")]
+		public async Task<IActionResult> UpdateBlog(int id, [FromForm]BlogModel model)
 		{
 			try
 			{

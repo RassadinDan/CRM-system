@@ -48,7 +48,8 @@ namespace SkillProfiWebAPI.Controllers
 
 		[HttpPost("createProject")]
 		[Authorize(Roles = "Administrator")]
-		public async Task<IActionResult> CreateProject([FromBody]ProjectModel model)
+		[Consumes("multipart/form-data")]
+		public async Task<IActionResult> CreateProject([FromForm]ProjectModel model)
 		{
 			try
 			{
@@ -63,7 +64,8 @@ namespace SkillProfiWebAPI.Controllers
 
 		[HttpPut("updateProject/{id}")]
 		[Authorize(Roles = "Administrator")]
-		public async Task<IActionResult> UpdateProject(int id, [FromBody]ProjectModel model)
+		[Consumes("multipart/form-data")]
+		public async Task<IActionResult> UpdateProject(int id, [FromForm]ProjectModel model)
 		{
 			try
 			{

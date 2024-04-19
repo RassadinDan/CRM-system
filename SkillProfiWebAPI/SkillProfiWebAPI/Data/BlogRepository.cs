@@ -12,7 +12,6 @@ namespace SkillProfiWebAPI.Data
 		{
 			_db = db;
 		}
-
 		public async Task<IEnumerable<Blog>> GetBlogsAsync()
 		{
 			var blogs = _db.Blogs.AsEnumerable();

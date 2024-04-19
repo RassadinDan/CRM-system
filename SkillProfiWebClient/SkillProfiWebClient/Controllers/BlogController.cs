@@ -48,6 +48,25 @@ namespace SkillProfiWebClient.Controllers
 			return View(new BlogModel());
 		}
 
+		[HttpGet("updateform/{id}")]
+		public async Task<IActionResult> Update(int id) 
+		{
+			var blog = await _blogDataService.GetByIdAsync(id);
+			var model = new BlogModel()
+			{
+				Name = blog.Name,
+				Preview = blog.Preview,
+				Description = blog.Description,
+			};
+
+			if (blog.ImageData != null)
+			{
+				string imageBase64Data = Convert.ToBase64String(blog.ImageData);
+				model.ImageDataUrl = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+			}
+			return View(model);
+		}
+
 		[HttpPost("create")]
 		public async Task<IActionResult> CreateBlog([FromForm]BlogModel model)
 		{
