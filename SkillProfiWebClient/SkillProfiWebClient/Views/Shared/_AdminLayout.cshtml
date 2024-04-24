@@ -4,11 +4,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SkillProfiWebClient.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <nav class="navbar side-navbar">
-
-    </nav>
+    <div class="sidenav">
+        <a asp-action="workbench" asp-controller="Admin" class="navbar-brand">Рабочий стол</a>
+        <a asp-action="main" asp-controller="Admin" class="navbar-brand">Главная</a>
+        <a asp-action="getall" asp-controller="Projects" class="navbar-brand">Проекты</a>
+        <a asp-action="getall" asp-controller="Blog" class="navbar-brand">Блог</a>
+        <a asp-action="getall" asp-controller="Service" class="navbar-brand">Услуги</a>
+        <a asp-action="getall" asp-controller="Contact" class="navbar-brand">Контакты</a>
+    </div>
     <div>
         @RenderBody()
     </div>

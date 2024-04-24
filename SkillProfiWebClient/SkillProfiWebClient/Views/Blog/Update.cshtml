@@ -6,7 +6,8 @@
 
 <html>
 	<body>
-		<form asp-action="UpdateBlog" method="post" enctype="multipart/form-data">
+		<form asp-action="UpdateBlog" asp-controller="Blog" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+
 			<div class="form-group">
 				<label asp-for="Name" class="control-label">Название</label>
 				<input asp-for="Name" value="@Model.Name" class="form-control" />
@@ -22,11 +23,20 @@
 				<input asp-for="Description" value="@Model.Description" class="form-control" />
 				<span asp-validation-for="Description" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="ImageFile" class="control-label">Фото</label>
-				<input asp-for="ImageFile" class="form-control" />
-				<span asp-validation-for="ImageFile" class="text-danger"></span>
-			</div>
+
+			@if(Model.ImageDataUrl != null)
+			{
+				<div class="form-group">
+					<label>Текущее изображение</label>
+					<img src="@Model.ImageDataUrl" alt="Current Image" style="width:100px; height:auto" />
+					@* <label>
+						<input type="checkbox" name="DeleteImage" value="true" />
+					</label> *@
+				</div>
+			}
+
+			<label class="control-label">Загрузите новое изображение, если хотите его заменить:</label>
+			<input type="file" asp-for="ImageFile" />
 			<div class="form-group">
 				<input type="submit" value="Update" class="btn btn-primary" />
 			</div>

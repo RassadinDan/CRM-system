@@ -28,7 +28,9 @@
                 Grid.Row="5"
                 Margin="5"
                 FontSize="18"
-                Content="Войти"></Button>
+                Content="Войти"
+                Click="LogInBut_OnClick"></Button>
+        
         <Button x:Name="RegisterBut"
                 Grid.Column="1"
                 Grid.Row="5"

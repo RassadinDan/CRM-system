@@ -60,12 +60,6 @@ namespace SkillProfiWebClient.Controllers
 		}
 
 
-		//[HttpGet("main")]
-		//public IActionResult Main()
-		//{
-		//	ViewData["Title"] = _settings.MainHeader;
-		//	return View(_settings);
-		//}
 
 		[HttpPost("updateSettings")]
 		public async Task<IActionResult> UpdateSettings([FromForm]MainSettings newSettings)
@@ -79,44 +73,6 @@ namespace SkillProfiWebClient.Controllers
 			{
 				return BadRequest(new { message = "Error while updating settings" });
 			}
-		}
-
-
-		// TODO Задача: разобраться с обновлением пользовательского интерфейса через администраторскую логику
-		// класс для этого уже создан, логика API настроена, осталось теперь настроить это "на местах".
-		// Итак, у меня есть две огромные папки с контроллерами, оборудованными для создания, обновления, удаления и получения любой модели.
-		// Теперь мне необходимо разделить оставшуюся логику по ролям. Этот контроллер для администраторов, у них больше доступных функций.
-		
-
-
-		[HttpGet]
-		public IActionResult Projects() 
-		{
-			return View();
-		}
-
-
-		// Ну и вот сюда тоже нужно сделать редирект. Или отсюда \:
-
-		[HttpGet]
-		public IActionResult Services() 
-		{
-			return View();
-		}
-
-		[HttpGet]
-		public IActionResult Blog()
-		{
-			return View();
-		}
-
-		// А вот теперь главный вопрос: а как мне реализовать этот замечательный переход из одного контроллера в другой.
-		// Как это делается я в курсе, тут все понятно)) не понятно, что именно я хочу от этого всего, не понятен ВЕСЬ путь, который нужно проделать.
-
-		[HttpGet]
-		public IActionResult Contacts() 
-		{
-			return RedirectToAction("GetContacts", "Contact");
 		}
 	}
 }

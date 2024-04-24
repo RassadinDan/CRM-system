@@ -64,7 +64,6 @@ namespace SkillProfiWebAPI.Data
 				}
 			}
 			_db.SaveChanges();
-
 		}
 
 		public async Task DeleteBlogAsync(int id)

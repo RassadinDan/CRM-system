@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Net.Http;
+using ModelLibrary.Auth;
+using ModelLibrary.Auth.Dto;
 
 namespace SkillProfiDesctopClient
 {
@@ -22,6 +25,18 @@ namespace SkillProfiDesctopClient
 		public AuthWindow()
 		{
 			InitializeComponent();
+		}
+
+		private async void LogInBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var authService = new AuthService(new HttpClient());
+			var authRequest = new LoginRequest
+			{
+				UserName = UsernameBox.Text,
+				Password = PasswdBox.Password
+			};
+			var result = await authService.LoginAsync(authRequest);
+			this.Close();
 		}
 	}
 }

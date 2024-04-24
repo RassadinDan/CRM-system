@@ -54,6 +54,7 @@ namespace SkillProfiWebClient.Controllers
 			var blog = await _blogDataService.GetByIdAsync(id);
 			var model = new BlogModel()
 			{
+				Id = blog.Id,
 				Name = blog.Name,
 				Preview = blog.Preview,
 				Description = blog.Description,
@@ -81,7 +82,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPut("update/{id}")]
+		[HttpPost("update/{id}")]
 		public async Task<IActionResult> UpdateBlog(int id, [FromForm] BlogModel model)
 		{
 			try

@@ -25,6 +25,7 @@ namespace SkillProfiWebClient.Controllers
 			return View(new ApplicationRequest());
 		}
 
+		[HttpPost("postapp")]
 		public async Task<IActionResult> PostApplication([FromForm]ApplicationRequest model)
 		{
 			var r = await _guestDataService.PostApplicationAsync(model);
