@@ -23,6 +23,7 @@ namespace SkillProfiWebClient
 			services.AddScoped<GuestDataService>();
 			services.AddScoped<UISettingsManager>();
 			services.AddScoped<BlogDataService>();
+			services.AddScoped<ProjectDataService>();
 			services.AddScoped<ServiceDataService>();
 			services.AddScoped<ContactDataService>();
 			services.AddHttpClient("AuthorizedClient", client=>

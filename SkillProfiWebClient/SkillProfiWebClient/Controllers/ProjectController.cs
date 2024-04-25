@@ -4,13 +4,16 @@ using SkillProfiWebClient.Data;
 
 namespace SkillProfiWebClient.Controllers
 {
+	[Route("[controller]")]
 	public class ProjectController : Controller
 	{
 		private readonly ProjectDataService _projectData;
+		private readonly ILogger<ProjectController> _logger;
 
-		public ProjectController(ProjectDataService projectData)
+		public ProjectController(ProjectDataService projectData, ILogger<ProjectController> logger)
 		{
 			_projectData = projectData;
+			_logger = logger;
 		}
 
 		[HttpGet("getall")]
@@ -41,9 +44,28 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
+		[HttpGet("createform")]
 		public IActionResult ProjectForm()
 		{
 			return View(new ProjectModel());
+		}
+
+		[HttpGet("updateform/{id}")]
+		public async Task<IActionResult> UpdateForm(int id)
+		{
+			var project = await _projectData.GetProjectByIdAsync(id);
+			var model = new ProjectModel()
+			{
+				Id = project.Id,
+				Preview = project.Preview,
+				Description = project.Description
+			};
+			if(project.ImageData != null)
+			{
+				string imageBase64Data = Convert.ToBase64String(project.ImageData);
+				model.ImageDataUrl = string.Format("data:image/jpeg;base64,{0}", imageBase64Data);
+			}
+			return View(model);
 		}
 
 		[HttpPost("create")]
@@ -60,7 +82,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPut("update/{id}")]
+		[HttpPost("update/{id}")]
 		public async Task<IActionResult> UpdateProject(int id, [FromForm]ProjectModel model)
 		{
 			try

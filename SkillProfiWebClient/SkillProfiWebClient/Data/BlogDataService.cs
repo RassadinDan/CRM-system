@@ -34,24 +34,26 @@ namespace SkillProfiWebClient.Data
 		{
 			var url = "https://localhost:7044/api/blog/createBlog";
 
-			using (var memoryStream = new MemoryStream())
+			using (var formData = new MultipartFormDataContent())
 			{
-				await model.ImageFile.CopyToAsync(memoryStream);
-				var fileBytes = memoryStream.ToArray();
-				var fileContent = new ByteArrayContent(fileBytes);
-				fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
+				formData.Add(new StringContent(model.Name ?? string.Empty), "Name");
+				formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
+				formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
 
-				using (var formData = new MultipartFormDataContent())
+				if(model.ImageFile != null)
 				{
-					formData.Add(new StringContent(model.Name ?? string.Empty), "Name");
-					formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
-					formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
-					formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
 
-					var result = await _httpClient.PostAsync(url, formData);
-					return result.IsSuccessStatusCode;
-					
+					using (var memoryStream = new MemoryStream())
+					{
+						await model.ImageFile.CopyToAsync(memoryStream);
+						var fileBytes = memoryStream.ToArray();
+						var fileContent = new ByteArrayContent(fileBytes);
+						fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
+						formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+					}
 				}
+				var result = await _httpClient.PostAsync(url, formData);
+				return result.IsSuccessStatusCode;
 			}
 		}
 
@@ -73,7 +75,6 @@ namespace SkillProfiWebClient.Data
 						var fileBytes = memoryStream.ToArray();
 						var fileContent = new ByteArrayContent(fileBytes);
 						fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
-
 						formData.Add(fileContent, "ImageFile", model.ImageFile.FileName); 
 					}
 				}

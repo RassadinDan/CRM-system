@@ -33,7 +33,7 @@ namespace SkillProfiWebAPI.Data
 			var project = new Project()
 			{
 				Preview = model.Preview,
-				Description = model.Decription
+				Description = model.Description
 			};
 			if(model.ImageFile != null)
 			{
@@ -52,7 +52,7 @@ namespace SkillProfiWebAPI.Data
 		{
 			var project = await _db.Projects.FirstOrDefaultAsync(p=>p.Id== id);
 			project.Preview = model.Preview;
-			project.Description = model.Decription;
+			project.Description = model.Description;
 			if (model.ImageFile != null)
 			{
 				using (var memoryStream = new MemoryStream())

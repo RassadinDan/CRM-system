@@ -49,7 +49,7 @@ namespace SkillProfiWebClient.Controllers
 		}
 
 		[HttpGet("updateform/{id}")]
-		public async Task<IActionResult> Update(int id) 
+		public async Task<IActionResult> UpdateForm(int id) 
 		{
 			var blog = await _blogDataService.GetByIdAsync(id);
 			var model = new BlogModel()

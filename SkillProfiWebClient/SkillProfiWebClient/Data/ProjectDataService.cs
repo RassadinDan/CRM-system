@@ -1,5 +1,6 @@
 ﻿using ModelLibrary.Projects;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace SkillProfiWebClient.Data
 {
@@ -7,9 +8,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public ProjectDataService(HttpClient httpClient)
+		public ProjectDataService(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public async Task<IEnumerable<Project>> GetProjectsAsync()
@@ -31,28 +32,50 @@ namespace SkillProfiWebClient.Data
 		public async Task<bool> CreateProjectAsync(ProjectModel model)
 		{
 			var url = "https://localhost:7044/api/project/createProject";
-			var result = await _httpClient.PostAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
+
+			using(var formData = new MultipartFormDataContent())
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
+				formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
+
+				if(model.ImageFile != null)
+				{
+					using (var memoryStream = new MemoryStream())
+					{
+						await model.ImageFile.CopyToAsync(memoryStream);
+						var fileBytes = memoryStream.ToArray();
+						var fileContent = new ByteArrayContent(fileBytes);
+						fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
+						formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+					}
+				}
+				var result = await _httpClient.PostAsync(url, formData);
+				return result.IsSuccessStatusCode;
 			}
 		}
 
 		public async Task<bool> UpdateProjectAsync(int id, ProjectModel model)
 		{
 			var url = $"https://localhost:7044/api/project/updateProject/{id}";
-			var result = await _httpClient.PutAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
+
+			using(var formData = new MultipartFormDataContent())
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				formData.Add(new StringContent(model.Preview ?? string.Empty), "Preview");
+				formData.Add(new StringContent(model.Description ?? string.Empty), "Description");
+
+				if(model.ImageFile != null)
+				{
+					using(var memoryStream = new MemoryStream())
+					{
+						await model.ImageFile.CopyToAsync(memoryStream);
+						var fileBytes = memoryStream.ToArray();
+						var fileContent = new ByteArrayContent(fileBytes);
+						fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.ImageFile.ContentType);
+						formData.Add(fileContent, "ImageFile", model.ImageFile.FileName);
+					}
+				}
+				var result = await _httpClient.PutAsync(url, formData);
+				return result.IsSuccessStatusCode;
 			}
 		}
 
@@ -60,14 +83,7 @@ namespace SkillProfiWebClient.Data
 		{
 			var url = $"https://localhost:7044/api/project/deleteProject/{id}";
 			var result = await _httpClient.DeleteAsync(url);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 	}
 }
