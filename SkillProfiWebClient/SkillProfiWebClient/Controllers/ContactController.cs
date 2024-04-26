@@ -42,9 +42,25 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		public IActionResult ContactForm()
+		[HttpGet("createform")]
+		public IActionResult CreateForm()
 		{
 			return View(new ContactModel());
+		}
+
+		[HttpGet("updateform/{id}")]
+		public async Task<IActionResult> UpdateForm(int id)
+		{
+			var contact = await _contactData.GetContactByIdAsync(id);
+			var model = new ContactModel()
+			{
+				Id = contact.Id,
+				Name =  contact.Name,
+				Email = contact.Email,
+				Address = contact.Address,
+				Phone = contact.Phone
+			};
+			return View(model);
 		}
 
 		[HttpPost("create")]
@@ -53,7 +69,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _contactData.CreateContactAsync(model);
-				return Ok();
+				return RedirectToAction("GetContacts");
 			}
 			catch (Exception ex)
 			{
@@ -61,13 +77,13 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPut("update/{id}")]
+		[HttpPost("update/{id}")]
 		public async Task<IActionResult> UpdateContact(int id, [FromForm]ContactModel model)
 		{
 			try
 			{
 				await _contactData.UpdateContactAsync(id, model);
-				return Ok();
+				return RedirectToAction("GetContacts");
 			}
 			catch(Exception ex)
 			{

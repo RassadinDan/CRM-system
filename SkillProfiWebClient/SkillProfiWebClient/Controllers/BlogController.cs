@@ -43,7 +43,7 @@ namespace SkillProfiWebClient.Controllers
 		}
 
 		[HttpGet("createform")]
-		public IActionResult Create()
+		public IActionResult CreateForm()
 		{
 			return View(new BlogModel());
 		}

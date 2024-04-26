@@ -8,12 +8,10 @@ namespace SkillProfiWebClient.Controllers
 	public class ProjectController : Controller
 	{
 		private readonly ProjectDataService _projectData;
-		private readonly ILogger<ProjectController> _logger;
 
-		public ProjectController(ProjectDataService projectData, ILogger<ProjectController> logger)
+		public ProjectController(ProjectDataService projectData)
 		{
 			_projectData = projectData;
-			_logger = logger;
 		}
 
 		[HttpGet("getall")]
@@ -45,7 +43,7 @@ namespace SkillProfiWebClient.Controllers
 		}
 
 		[HttpGet("createform")]
-		public IActionResult ProjectForm()
+		public IActionResult CreateForm()
 		{
 			return View(new ProjectModel());
 		}

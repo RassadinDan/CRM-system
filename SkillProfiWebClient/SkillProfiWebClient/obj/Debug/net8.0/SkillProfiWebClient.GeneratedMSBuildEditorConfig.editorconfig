@@ -38,8 +38,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/CreateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/GetBlogs.cshtml]
@@ -50,8 +50,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/CreateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/GetContacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxHZXRDb250YWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Blog.cshtml]
@@ -74,12 +82,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/ProjectForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxQcm9qZWN0Rm9ybS5jc2h0bWw=
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/CreateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxVcGRhdGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Service/CreateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDcmVhdGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Service/UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/Error.cshtml]

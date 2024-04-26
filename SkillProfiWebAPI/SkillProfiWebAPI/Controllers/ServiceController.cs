@@ -32,7 +32,7 @@ namespace SkillProfiWebAPI.Controllers
 			}
 		}
 
-		[HttpGet("getById/{id}")]
+		[HttpGet("getone/{id}")]
 		[Authorize(Roles = "Guest, Administrator")]
 		public async Task<ActionResult<Service>> GetServiceById(int id)
 		{

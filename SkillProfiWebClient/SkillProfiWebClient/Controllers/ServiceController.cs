@@ -4,6 +4,7 @@ using SkillProfiWebClient.Data;
 
 namespace SkillProfiWebClient.Controllers
 {
+	[Route("[controller]")]
 	public class ServiceController : Controller
 	{
 		private readonly ServiceDataService _serviceData;
@@ -41,9 +42,23 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		public IActionResult ServiceForm()
+		[HttpGet("createform")]
+		public IActionResult CreateForm()
 		{
 			return View(new ServiceModel());
+		}
+
+		[HttpGet("updateform/{id}")]
+		public async Task<IActionResult> UpdateForm(int id)
+		{
+			var service = await _serviceData.GetServiceByIdAsync(id);
+			var model = new ServiceModel()
+			{
+				Id = service.Id,
+				Name = service.Name,
+				Description = service.Description
+			};
+			return View(model);
 		}
 
 		[HttpPost("create")]
@@ -60,8 +75,8 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPut("update/{id}")]
-		public async Task<IActionResult> UpdateService(int id, [FromBody] ServiceModel model)
+		[HttpPost("update/{id}")]
+		public async Task<IActionResult> UpdateService(int id, [FromForm] ServiceModel model)
 		{
 			try
 			{

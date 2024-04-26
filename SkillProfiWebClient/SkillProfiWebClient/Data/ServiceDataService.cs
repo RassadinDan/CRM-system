@@ -7,9 +7,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public ServiceDataService(HttpClient httpClient)
+		public ServiceDataService(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public async Task<IEnumerable<Service>> GetServicesAsync()
@@ -32,42 +32,21 @@ namespace SkillProfiWebClient.Data
 		{
 			var url = "https://localhost:7044/api/service/createService";
 			var result = await _httpClient.PostAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 
 		public async Task<bool> UpdateServiceAsync(int id, ServiceModel model)
 		{
 			var url = $"https://localhost:7044/api/service/updateService/{id}";
 			var result = await _httpClient.PutAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else 
-			{ 
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 
 		public async Task<bool> DeleteServiceAsync(int id)
 		{
 			var url = $"https://localhost:7044/api/service/deleteService/{id}";
 			var result = await _httpClient.DeleteAsync(url);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 	}
 }

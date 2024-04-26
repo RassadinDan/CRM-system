@@ -6,7 +6,7 @@
 
 <html>
 	<body>
-		<form asp-action="UodateProject" asp-controller="Project" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+		<form asp-action="UpdateProject" asp-controller="Project" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label asp-for="Preview" class="control-label">Краткое описание</label>
 				<input asp-for="Preview" value="@Model.Preview" class="form-control" />

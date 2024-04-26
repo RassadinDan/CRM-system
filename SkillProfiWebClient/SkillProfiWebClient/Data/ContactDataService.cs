@@ -7,9 +7,9 @@ namespace SkillProfiWebClient.Data
 	{
 		private readonly HttpClient _httpClient;
 
-		public ContactDataService(HttpClient httpClient)
+		public ContactDataService(IHttpClientFactory httpClientFactory)
 		{
-			_httpClient = httpClient;
+			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
 		public async Task<IEnumerable<Contact>> GetContactsAsync()
@@ -32,42 +32,21 @@ namespace SkillProfiWebClient.Data
 		{
 			var url = "https://localhost:7044/api/contact/createContact";
 			var result = await _httpClient.PostAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 
 		public async Task<bool> UpdateContactAsync(int id, ContactModel model)
 		{
 			var url = $"https://localhost:7044/api/contact/updateContact/{id}";
 			var result = await _httpClient.PutAsJsonAsync(url, model);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return true;
-			}
+			return result.IsSuccessStatusCode;
 		}
 
 		public async Task<bool> DeleteContactAsync(int id)
 		{
 			var url = $"https://localhost:7044/api/contact/deleteContact/{id}";
 			var result = await _httpClient.DeleteAsync(url);
-			if(result.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return result.IsSuccessStatusCode;
 		}
 	}
 }
