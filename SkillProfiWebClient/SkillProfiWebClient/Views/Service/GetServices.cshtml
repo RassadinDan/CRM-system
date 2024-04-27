@@ -1,0 +1,23 @@
+﻿@using ModelLibrary.Services
+@model IEnumerable<Service>
+@{
+	Layout = "_Layout";
+	ViewData["Title"] = "Услуги";
+}
+
+<html>
+	<body>
+		<h2 class="title">@ViewData["Title"]</h2>
+		@foreach(Service service in Model)
+		{
+			<div class="form-control">
+				<details>
+					<summary>@service.Name</summary>
+					<p>@service.Description</p>
+					<a asp-action="UpdateForm" asp-controller="Service" asp-route-id="@service.Id" class="btn btn-primary">Изменить</a>
+					<a asp-action="DeleteService" asp-controller="Service" asp-route-id="@service.Id" class="btn btn-primary">Удалить</a>
+				</details>
+			</div>
+		}
+	</body>
+</html>

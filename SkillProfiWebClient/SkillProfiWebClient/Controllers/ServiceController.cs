@@ -20,7 +20,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var services = await _serviceData.GetServicesAsync();
-				return Ok(services);
+				return View(services);
 			}
 			catch (Exception ex)
 			{
@@ -67,7 +67,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _serviceData.CreateServiceAsync(model);
-				return Ok();
+				return RedirectToAction("GetServices");
 			}
 			catch (Exception ex)
 			{
@@ -76,12 +76,12 @@ namespace SkillProfiWebClient.Controllers
 		}
 
 		[HttpPost("update/{id}")]
-		public async Task<IActionResult> UpdateService(int id, [FromForm] ServiceModel model)
+		public async Task<IActionResult> UpdateService(int id, [FromForm]ServiceModel model)
 		{
 			try
 			{
 				await _serviceData.UpdateServiceAsync(id, model);
-				return Ok();
+				return RedirectToAction("GetServices");
 			}
 			catch (Exception ex)
 			{
@@ -95,7 +95,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _serviceData.DeleteServiceAsync(id);
-				return Ok();
+				return RedirectToAction("GetServices");
 			}
 			catch(Exception ex)
 			{
