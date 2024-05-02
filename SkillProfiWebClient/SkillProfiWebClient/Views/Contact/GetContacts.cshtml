@@ -3,24 +3,27 @@
 @model IEnumerable<Contact>
 @{
 	Layout = "_Layout";
+	ViewData["Title"] = "Контактная информация";
 }
 
 <html>
 	<body>
-		<h2></h2>
+		<h2 class="title">
+			@ViewData["Title"]
+		</h2>
 		<div>
-		@foreach (Contact c in Model)
-		{
-			<p>
-				@c.Name
-			</p>
-			<p>
-				@c.Address
-			</p>
-			<p>
-				@c.Email
-			</p>
-		}
+			@foreach (Contact c in Model)
+			{
+				<p>
+					@c.Name
+				</p>
+				<p>
+					@c.Address
+				</p>
+				<p>
+					@c.Email
+				</p>
+			}
 		</div>
 	</body>
 </html>
