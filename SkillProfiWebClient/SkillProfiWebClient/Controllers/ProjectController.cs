@@ -20,7 +20,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var projects = await _projectData.GetProjectsAsync();
-				return Ok(projects);
+				return View(projects);
 			}
 			catch (Exception ex)
 			{
