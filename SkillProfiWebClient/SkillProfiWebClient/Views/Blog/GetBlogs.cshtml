@@ -2,14 +2,28 @@
 @model IEnumerable<Blog>
 @{
 	Layout = "_Layout";
+	ViewData["Title"] = "Блог";
 }
 
 <html>
 	<body>
-		<div>
-			<img />
-			<span></span>
-			<span></span>
-		</div>
+		<h2 class="title">@ViewData["Title"]</h2>
+		@foreach(Blog blog in Model)
+		{
+			string imageBase64Data = Convert.ToBase64String(blog.ImageData);
+			<div class="card">
+				<div class="card-top">
+					<a asp-controller="Blog" asp-action="GetById" asp-route-id="@blog.Id">
+						<img src="@string.Format("data:image/jpeg;base64,{0}", imageBase64Data)" alt="BlogImage" style="width: 350px; height: auto"/>
+					</a>
+				</div>
+				<div>
+					@blog.Name
+				</div>
+				<div class="card-preview">
+					@blog.Preview
+				</div>
+			</div>
+		}
 	</body>
 </html>

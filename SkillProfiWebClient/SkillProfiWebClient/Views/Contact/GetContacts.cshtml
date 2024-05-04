@@ -11,19 +11,19 @@
 		<h2 class="title">
 			@ViewData["Title"]
 		</h2>
-		<div>
-			@foreach (Contact c in Model)
-			{
-				<p>
+		@foreach (Contact c in Model)
+		{
+			<div class="contact">
+				<div class="contact-name">
 					@c.Name
-				</p>
-				<p>
-					@c.Address
-				</p>
-				<p>
-					@c.Email
-				</p>
-			}
-		</div>
+				</div>
+				<div>
+					Адрес: @c.Address
+				</div>
+				<div>
+					Электронная почта: @c.Email
+				</div>
+			</div>
+		}
 	</body>
 </html>

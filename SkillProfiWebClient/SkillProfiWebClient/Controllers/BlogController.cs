@@ -20,7 +20,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var blogs = await _blogDataService.GetBlogsAsync();
-				return Ok(blogs);
+				return View(blogs);
 			}
 			catch(Exception ex)
 			{
@@ -74,7 +74,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{ 
 				await _blogDataService.CreateBlogAsync(model);
-				return Ok();
+				return RedirectToAction("GetBlogs");
 			}
 			catch (Exception ex)
 			{
@@ -88,7 +88,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _blogDataService.UpdateBlogAsync(id, model);
-				return Ok();
+				return RedirectToAction("GetBlogs");
 			}
 			catch(Exception ex)
 			{
@@ -102,7 +102,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{ 
 				var result = await _blogDataService.DeleteBlogAsync(id);
-				return Ok();
+				return RedirectToAction("GetBlogs");
 			}
 			catch(Exception ex)
 			{
