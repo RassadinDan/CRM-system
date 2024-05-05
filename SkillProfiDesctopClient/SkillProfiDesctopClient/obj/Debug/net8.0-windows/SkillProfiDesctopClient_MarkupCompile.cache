@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\
 SkillProfiDesctopClient
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\App.xaml
-11574981046
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\App.xaml
+4-11145848
 
-4104099203
+8-1821614470
 202-944147762
-AuthWindow.xaml;
+AuthWindow.xaml;MainWindow.xaml;RegistrationWindow.xaml;WorkbenchWindow.xaml;
 
-False
+True
 

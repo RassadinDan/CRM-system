@@ -36,7 +36,25 @@ namespace SkillProfiDesctopClient
 				Password = PasswdBox.Password
 			};
 			var result = await authService.LoginAsync(authRequest);
-			this.Close();
+			
+			if(result != null)
+			{
+				AuthSession.IsAuthenticated = true;
+				AuthSession.User = result.User;
+				AuthSession.Token = result.Token;
+				if(AuthSession.User.Role == "Administrator")
+				{
+					var workbench = new WorkbenchWindow();
+					workbench.Show();
+				}
+				else
+				{
+					var main = new MainWindow();
+					main.Show();
+				}
+				this.Close();
+			}
+
 		}
 	}
 }

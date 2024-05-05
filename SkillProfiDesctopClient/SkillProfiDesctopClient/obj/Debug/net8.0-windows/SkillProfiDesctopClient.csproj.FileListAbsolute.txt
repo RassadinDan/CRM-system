@@ -27,3 +27,9 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\SkillProfiDesctopClient.pdb
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\SkillProfiDesctopClient.genruntimeconfig.cache
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\ref\SkillProfiDesctopClient.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\RegistrationWindow.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\WorkbenchWindow.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\RegistrationWindow.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\WorkbenchWindow.baml

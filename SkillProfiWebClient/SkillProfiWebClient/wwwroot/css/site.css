@@ -74,10 +74,3 @@ body {
 .contact-name{
   font-size: 16px;
 }
-
-.button{
-  height: 20px;
-  width: auto;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}

@@ -21,14 +21,7 @@ namespace SkillProfiWebClient.Data
 				requestUri: url,
 				content: new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8,
 				mediaType: "application/json"));
-			if(r.IsSuccessStatusCode)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return r.IsSuccessStatusCode;
 		}
 	}
 }

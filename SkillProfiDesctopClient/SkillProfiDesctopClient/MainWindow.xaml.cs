@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ModelLibrary.Applications;
+using Newtonsoft.Json;
 
 namespace SkillProfiDesctopClient
 {
@@ -22,6 +24,20 @@ namespace SkillProfiDesctopClient
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SubmitBut_OnClick(object sender, RoutedEventArgs e)
+        {
+            var url = "https://localhost:7044/api/guest/postapplication";
+
+            var model = new ApplicationModel();
+            model.Name = NameBox.Text;
+            model.Email = EmailBox.Text;
+            model.Text = ApplicationText.Text;
+            
+            var httpClient = new HttpClient();
+            var r = await httpClient.PostAsJsonAsync(url, model);
+
         }
     }
 }
