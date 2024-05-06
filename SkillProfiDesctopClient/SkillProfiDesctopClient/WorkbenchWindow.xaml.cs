@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ModelLibrary.Data;
+using ModelLibrary.Applications;
+using System.Net.Http;
+using Microsoft.Extensions.Http;
 
 namespace SkillProfiDesctopClient
 {
@@ -19,9 +23,18 @@ namespace SkillProfiDesctopClient
 	/// </summary>
 	public partial class WorkbenchWindow : Window
 	{
+		private IEnumerable<ModelLibrary.Applications.Application> applications {get; set;}
+		private AdminDataService _dataService {get; set;}
 		public WorkbenchWindow()
 		{
+			_dataService = new AdminDataService();
+			FillTheList();
 			InitializeComponent();
+		}
+
+		private void FillTheList()
+		{
+			applications = _dataService.GetApplicationsAsync().Result;
 		}
 	}
 }

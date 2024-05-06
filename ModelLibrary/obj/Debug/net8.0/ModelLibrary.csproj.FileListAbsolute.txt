@@ -11,3 +11,16 @@ D:\Work\Homework\Homework19\ModelLibrary\obj\Debug\net8.0\refint\ModelLibrary.dl
 D:\Work\Homework\Homework19\ModelLibrary\obj\Debug\net8.0\ModelLibrary.pdb
 D:\Work\Homework\Homework19\ModelLibrary\obj\Debug\net8.0\ref\ModelLibrary.dll
 D:\Work\Homework\Homework19\ModelLibrary\obj\Debug\net8.0\ModelLibrary.csproj.AssemblyReference.cache
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.csproj.AssemblyReference.cache
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.AssemblyInfoInputs.cache
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.AssemblyInfo.cs
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.csproj.CoreCompileInputs.cache
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.sourcelink.json
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.dll
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\refint\ModelLibrary.dll
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ModelLibrary.pdb
+D:\Work\Homework\FinalProject\ModelLibrary\bin\Debug\net8.0\ModelLibrary.deps.json
+D:\Work\Homework\FinalProject\ModelLibrary\bin\Debug\net8.0\ModelLibrary.dll
+D:\Work\Homework\FinalProject\ModelLibrary\bin\Debug\net8.0\ModelLibrary.pdb
+D:\Work\Homework\FinalProject\ModelLibrary\obj\Debug\net8.0\ref\ModelLibrary.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Homework\\Homework19\\ModelLibrary\\ModelLibrary.csproj": {}
+    "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Homework\\Homework19\\ModelLibrary\\ModelLibrary.csproj": {
+    "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Homework\\Homework19\\ModelLibrary\\ModelLibrary.csproj",
+        "projectUniqueName": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
         "projectName": "ModelLibrary",
-        "projectPath": "D:\\Work\\Homework\\Homework19\\ModelLibrary\\ModelLibrary.csproj",
+        "projectPath": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
         "packagesPath": "C:\\Users\\Данька\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Homework\\Homework19\\ModelLibrary\\obj\\",
+        "outputPath": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,6 +52,14 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

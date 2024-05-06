@@ -33,3 +33,4 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\MainWindow.baml
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\RegistrationWindow.baml
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\WorkbenchWindow.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopCLient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

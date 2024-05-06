@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Homework19\ModelLibrary\ModelLibrary.csproj" />
+    <ProjectReference Include="..\..\..\FinalProject\ModelLibrary\ModelLibrary.csproj" />
   </ItemGroup>
 
 </Project>

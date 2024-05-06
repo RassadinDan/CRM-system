@@ -46,5 +46,18 @@
             Grid.Row="6"
             Margin="5"
             Content="Контакты"></Button>
+
+        <ListBox x:Name="ApplicationsListBox"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Grid.RowSpan="7"
+                 Margin="10"
+                 ItemsSource="">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Id}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
