@@ -13,6 +13,11 @@ namespace ModelLibrary.Data
 			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
+		public AdminDataService(HttpClient httpClient) 
+		{
+			_httpClient = httpClient;
+		}
+
 		public async Task<IEnumerable<Application>> GetApplicationsAsync()
 		{
 			var url = "https://localhost:7044/api/admin/getApplications";

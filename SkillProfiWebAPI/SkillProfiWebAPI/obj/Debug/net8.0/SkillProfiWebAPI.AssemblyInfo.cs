@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9893759a84c0b6f0aed69844b5d99f93c6009600")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f157907514e020380464cbdb496e58870f9b5934")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkillProfiWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -51,11 +51,19 @@
                  Grid.Column="1"
                  Grid.Row="1"
                  Grid.RowSpan="7"
-                 Margin="10"
-                 ItemsSource="">
+                 Margin="10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Path=Id}"></TextBlock>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} {1} {2} {3}">
+                                <Binding Path="Name"></Binding>
+                                <Binding Path="Email"></Binding>
+                                <Binding Path="DateTime"></Binding>
+                                <Binding Path="Status"></Binding>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

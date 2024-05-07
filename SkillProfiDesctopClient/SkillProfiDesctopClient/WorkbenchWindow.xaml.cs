@@ -15,6 +15,8 @@ using ModelLibrary.Data;
 using ModelLibrary.Applications;
 using System.Net.Http;
 using Microsoft.Extensions.Http;
+using System.Net.Http.Headers;
+using System.Collections.ObjectModel;
 
 namespace SkillProfiDesctopClient
 {
@@ -23,18 +25,20 @@ namespace SkillProfiDesctopClient
 	/// </summary>
 	public partial class WorkbenchWindow : Window
 	{
-		private IEnumerable<ModelLibrary.Applications.Application> applications {get; set;}
 		private AdminDataService _dataService {get; set;}
+		public ObservableCollection<ModelLibrary.Applications.Application> Applications {get; set;}
 		public WorkbenchWindow()
 		{
-			_dataService = new AdminDataService();
-			FillTheList();
 			InitializeComponent();
-		}
-
-		private void FillTheList()
-		{
-			applications = _dataService.GetApplicationsAsync().Result;
+			var httpClient = new HttpClient();
+			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
+			_dataService = new AdminDataService(httpClient);
+			Loaded += async (sender, e) =>
+			{
+				var data = await _dataService.GetApplicationsAsync();
+				Applications = new ObservableCollection<ModelLibrary.Applications.Application>(data);
+				ApplicationsListBox.ItemsSource = Applications;
+			};
 		}
 	}
 }

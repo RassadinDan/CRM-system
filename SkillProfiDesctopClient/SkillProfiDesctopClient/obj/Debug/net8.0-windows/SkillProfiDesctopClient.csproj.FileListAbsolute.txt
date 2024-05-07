@@ -34,3 +34,15 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\RegistrationWindow.baml
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopCLient\obj\Debug\net8.0-windows\WorkbenchWindow.baml
 D:\Work\Homework\FinalProject\SkillProfiDesctopCLient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Http.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
