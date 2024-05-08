@@ -14,56 +14,65 @@
             <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="136*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="38*"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="45"/>
-            <RowDefinition Height="135*"/>
+            <RowDefinition Height="134*"/>
             <RowDefinition Height="45*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
         <Button x:Name="LogInBut"
                 Grid.Column="2"
-                Grid.Row="5"
-                Margin="5"
+                Grid.Row="7"
+                Margin="5,5,5,5"
                 FontSize="18"
                 Content="Войти"
                 Click="LogInBut_OnClick"></Button>
-        
+
         <Button x:Name="RegisterBut"
                 Grid.Column="1"
-                Grid.Row="5"
-                Margin="5"
+                Grid.Row="7"
+                Margin="5,5,5,5"
                 FontSize="18"
-                Content="Зарегистрироваться"></Button>
-
-        <TextBlock Grid.Column="1"
-                   Grid.Row="1"
-                   Margin="5"
-                   FontSize="18"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Text="Имя пользователя:"></TextBlock>
+                Content="Зарегистрироваться"
+                Click="RegisterBut_OnClick"></Button>
 
         <TextBlock Grid.Column="1"
                    Grid.Row="3"
-                   Margin="5"
                    FontSize="18"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   Text="Пароль:"></TextBlock>
-        
+                   Text="Имя пользователя:"/>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="5"
+                   FontSize="18"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="Пароль:"/>
+
         <TextBox x:Name="UsernameBox"
                  Grid.Column="2"
-                 Grid.Row="1"
-                 Margin="5"
+                 Grid.Row="3"
+                 Margin="5,5,5,5"
                  FontSize="18"></TextBox>
 
         <PasswordBox x:Name="PasswdBox"
                      Grid.Column="2"
-                     Grid.Row="3"
-                     Margin="5"
+                     Grid.Row="5"
+                     Margin="5,5,5,5"
                      FontSize="18"></PasswordBox>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="24"
+                   Text="Вход"></TextBlock>
     </Grid>
 </Window>

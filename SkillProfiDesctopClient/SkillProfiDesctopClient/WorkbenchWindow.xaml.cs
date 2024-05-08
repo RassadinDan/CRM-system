@@ -40,5 +40,11 @@ namespace SkillProfiDesctopClient
 				ApplicationsListBox.ItemsSource = Applications;
 			};
 		}
+
+		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new ContactsWindow();
+			window.Show();
+		}
 	}
 }

@@ -54,7 +54,12 @@ namespace SkillProfiDesctopClient
 				}
 				this.Close();
 			}
+		}
 
+		private void RegisterBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new RegistrationWindow();
+			window.Show();
 		}
 	}
 }

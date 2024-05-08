@@ -46,3 +46,5 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bi
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\ContactsWindow.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\ContactsWindow.baml

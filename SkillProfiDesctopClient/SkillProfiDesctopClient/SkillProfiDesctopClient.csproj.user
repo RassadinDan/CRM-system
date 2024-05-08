@@ -5,6 +5,9 @@
     <Compile Update="AuthWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ContactsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AuthWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ContactsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

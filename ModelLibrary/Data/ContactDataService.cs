@@ -13,6 +13,11 @@ namespace ModelLibrary.Data
 			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
+		public ContactDataService(HttpClient httpClient)
+		{
+			_httpClient = httpClient;
+		}
+
 		public async Task<IEnumerable<Contact>> GetContactsAsync()
 		{
 			var url = "https://localhost:7044/api/contact/getall";

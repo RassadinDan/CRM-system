@@ -14,68 +14,80 @@
             <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="134*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="38*"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="89*"/>
             <RowDefinition Height="44*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="43*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
         <Button x:Name="RegisterBut"
                 Grid.Column="2"
-                Grid.Row="7"
-                Margin="5"
+                Grid.Row="9"
+                Margin="5,5,5,5"
                 FontSize="18"
-                Content="Зарегистрироваться"></Button>
+                Content="Зарегистрироваться"
+                Click="RegisterBut_OnClick"></Button>
 
         <Button x:Name="BackBut"
                 Grid.Column="1"
-                Grid.Row="7"
-                Margin="5"
+                Grid.Row="9"
+                Margin="5,5,5,5"
                 FontSize="18"
-                Content="Назад"></Button>
+                Content="Назад"
+                Click="BackBut_OnClick"></Button>
 
         <TextBox x:Name="UsernameBox"
                  Grid.Column="2"
-                 Grid.Row="1"
-                 Margin="5"
+                 Grid.Row="3"
+                 Margin="5,5,5,5"
                  FontSize="18"></TextBox>
 
         <PasswordBox x:Name="PasswdBox"
                      Grid.Column="2"
-                     Grid.Row="3"
-                     Margin="5"
+                     Grid.Row="5"
+                     Margin="5,5,5,5"
                      FontSize="18"></PasswordBox>
 
         <PasswordBox x:Name="ConfirmPasswdBox"
                      Grid.Column="2"
-                     Grid.Row="5"
-                     Margin="5"
+                     Grid.Row="7"
+                     Margin="5,5,5,6"
                      FontSize="18"></PasswordBox>
 
-        <TextBlock Grid.Column="1"
-                   Grid.Row="1"
-                   FontSize="18"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Text="Имя пользователя:"></TextBlock>
-        
         <TextBlock Grid.Column="1"
                    Grid.Row="3"
                    FontSize="18"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   Text="Пароль:"></TextBlock>
-        
+                   Text="Имя пользователя:" Height="24" Width="156"></TextBlock>
+
         <TextBlock Grid.Column="1"
                    Grid.Row="5"
                    FontSize="18"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   Text="Подтвердите пароль:"></TextBlock>
+                   Text="Пароль:" Height="24" Width="66"></TextBlock>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="7"
+                   FontSize="18"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="Подтвердите пароль:" Height="23" Width="176"></TextBlock>
+
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="24"
+                   Text="Регистрация"></TextBlock>
     </Grid>
 </Window>
