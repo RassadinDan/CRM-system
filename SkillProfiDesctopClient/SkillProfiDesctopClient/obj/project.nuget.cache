@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJfcWhbDsbxdvHDUwcAtf1HGMhbSUhfXum3wtKF6Cpad70vLo5Lm6TA1pecrf5ipi/ZNP4DwWHprOxhecxIW7w==",
+  "dgSpecHash": "LIpFFZOETSkahn+4gDB13XO/qSsQDuOFFzQfksOgvexK+eaZYyZTEoLzHjP31oZPPY+soIn2CsLoTBtB3TJR6w==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Homework\\FinalProject\\SkillProfiDesctopClient\\SkillProfiDesctopClient\\SkillProfiDesctopClient.csproj",
+  "projectFilePath": "D:\\work\\homework\\finalproject\\skillprofidesctopclient\\skillprofidesctopclient\\SkillProfiDesctopClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

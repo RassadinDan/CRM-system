@@ -35,7 +35,8 @@
         <Button x:Name="ProjectsBut"
             Grid.Row="3"
             Margin="5"
-            Content="Проекты"></Button>
+            Content="Проекты"
+            Click="ProjectsBut_OnClick"></Button>
         
         <Button x:Name="BlogsBut"
             Grid.Row="4"

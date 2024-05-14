@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MEdYNU6+uk4PNEqYBS7fRAYs5mDKLRDHPdy4RKBF6B9ofvHpBTmNhUUILw7SlxwG9L3pgtn5K5nMXLUDHHQFIg==",
+  "dgSpecHash": "mDNWSswCcXt6hodRdaxAAajOUKHXKXVUVPhVCprCrh40O7eUrqqNxhVxzWEfAZPe21+Q7xkaGmZt52w07bjqzA==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
+  "projectFilePath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данька\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Данька\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

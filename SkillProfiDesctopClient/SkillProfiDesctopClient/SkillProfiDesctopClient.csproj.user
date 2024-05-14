@@ -5,13 +5,28 @@
     <Compile Update="AuthWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="BlogsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ContactsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreateProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="OneProjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProjectsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="RegistrationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ServicesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WorkbenchWindow.xaml.cs">
@@ -22,13 +37,28 @@
     <Page Update="AuthWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="BlogsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ContactsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreateProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="OneProjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProjectsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="RegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ServicesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorkbenchWindow.xaml">

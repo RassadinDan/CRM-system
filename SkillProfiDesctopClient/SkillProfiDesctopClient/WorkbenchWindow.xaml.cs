@@ -41,10 +41,17 @@ namespace SkillProfiDesctopClient
 			};
 		}
 
-		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
+		private void ProjectsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			var window = new ContactsWindow();
+			ProjectsWindow window = new ProjectsWindow();
 			window.Show();
 		}
+
+		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			ContactsWindow window = new ContactsWindow();
+			window.Show();
+		}
+
 	}
 }
