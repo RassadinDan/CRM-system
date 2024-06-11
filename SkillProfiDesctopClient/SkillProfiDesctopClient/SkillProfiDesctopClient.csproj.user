@@ -17,6 +17,9 @@
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="OneBlogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="OneProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -47,6 +50,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OneBlogWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OneProjectWindow.xaml">

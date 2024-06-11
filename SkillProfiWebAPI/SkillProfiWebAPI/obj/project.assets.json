@@ -4595,11 +4595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
+      "projectUniqueName": "D:\\work\\homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
       "projectName": "SkillProfiWebAPI",
-      "projectPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
+      "projectPath": "D:\\work\\homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
       "packagesPath": "C:\\Users\\Данька\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\obj\\",
+      "outputPath": "D:\\work\\homework\\FinalProject\\SkillProfiWebAPI\\SkillProfiWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4681,7 +4681,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

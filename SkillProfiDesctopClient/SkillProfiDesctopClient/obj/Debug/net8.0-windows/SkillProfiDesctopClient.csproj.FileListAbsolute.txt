@@ -58,3 +58,5 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneProjectWindow.g.cs
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\CreateProjectWindow.baml
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneProjectWindow.baml
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneBlogWindow.g.cs
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneBlogWindow.baml

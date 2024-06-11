@@ -7,16 +7,67 @@
         mc:Ignorable="d"
         Title="BlogsWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="395*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="324*"/>
+            <RowDefinition Height="39*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="779*"/>
-            <ColumnDefinition Width="20*"/>
-        </Grid.ColumnDefinitions>
 
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   Text="Блог"/>
+        
+        <ListBox x:Name="BlogsListBox"
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 Margin="10"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"
+                               ItemWidth="400"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1"
+                            BorderBrush="Black">
+                        
+                        <Grid Margin="10"
+                              HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                
+                            </Grid.RowDefinitions>
+
+                            <Image/>
+
+                            <StackPanel Grid.Row="1"
+                                        Margin="5">
+                                <TextBlock Text="{Binding Preview}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

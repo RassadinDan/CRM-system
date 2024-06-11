@@ -9,127 +9,127 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SkillProfiWebClient
 build_property.RootNamespace = SkillProfiWebClient
-build_property.ProjectDir = D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient\
+build_property.ProjectDir = D:\work\homework\finalproject\skillprofiwebclient\skillprofiwebclient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Work\Homework\FinalProject\SkillProfiWebClient\SkillProfiWebClient
+build_property.MSBuildProjectDirectory = D:\work\homework\finalproject\skillprofiwebclient\skillprofiwebclient
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Admin/Contacts.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Admin/Contacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29udGFjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Admin/Main.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Admin/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Admin/Workbench.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Admin/Workbench.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV29ya2JlbmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Auth/Login.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Auth/Register.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/CreateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Blog/CreateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/GetBlogs.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Blog/GetBlogs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xHZXRCbG9ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Blog/UpdateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Blog/UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/CreateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Contact/CreateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/GetContacts.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Contact/GetContacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxHZXRDb250YWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Contact/UpdateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Contact/UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Blog.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Guest/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcQmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Contacts.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Guest/Contacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcQ29udGFjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Main.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Guest/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcTWFpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Projects.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Guest/Projects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcUHJvamVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Guest/Services.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Guest/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/CreateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Project/CreateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/GetProjects.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Project/GetProjects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxHZXRQcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Project/UpdateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Project/UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Service/CreateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Service/CreateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDcmVhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Service/GetServices.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Service/GetServices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxHZXRTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Service/UpdateForm.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Service/UpdateForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGVGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/Error.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/_AdminLayout.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/_GuestLayout.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Shared/_GuestLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HdWVzdExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/_ViewImports.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/_ViewStart.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/Homework/FinalProject/SkillProfiWebClient/SkillProfiWebClient/Views/Shared/_Layout.cshtml]
+[D:/work/homework/finalproject/skillprofiwebclient/skillprofiwebclient/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5meke1xjyg
