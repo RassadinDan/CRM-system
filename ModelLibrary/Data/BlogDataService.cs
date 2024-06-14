@@ -14,6 +14,11 @@ namespace ModelLibrary.Data
 			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
+		public BlogDataService(HttpClient httpClient) 
+		{
+			_httpClient = httpClient;
+		}
+
 		public async Task<IEnumerable<Blog>> GetBlogsAsync()
 		{
 			var url = "https://localhost:7044/api/blog/getBlogs";

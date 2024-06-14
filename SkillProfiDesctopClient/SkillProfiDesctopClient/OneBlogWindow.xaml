@@ -25,7 +25,19 @@
 
         <TextBlock x:Name="TitleBlock"
                    Grid.Column="1"
-                   Grid.Row="1"/>
+                   Grid.Row="1"
+                   Margin="5"
+                   FontSize="18"/>
+
+        <TextBlock x:Name="PreviewBlock"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   Margin="5"/>
+
+        <TextBlock x:Name="DescriptionBlock"
+                   Grid.Column="1"
+                   Grid.Row="5"
+                   Margin="5"/>
 
         <Image x:Name="BlogImage"
                Grid.Column="2"

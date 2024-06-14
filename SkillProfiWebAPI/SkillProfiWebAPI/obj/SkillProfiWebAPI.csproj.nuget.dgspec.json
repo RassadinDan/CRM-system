@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj": {}
+    "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj": {}
   },
   "projects": {
     "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,18 +79,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj": {
+    "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
+        "projectUniqueName": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj",
         "projectName": "SkillProfiWebAPI",
-        "projectPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
+        "projectPath": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj",
         "packagesPath": "C:\\Users\\Данька\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPI\\SkillProfiWebAPI\\obj\\",
+        "outputPath": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -104,6 +105,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -171,7 +173,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

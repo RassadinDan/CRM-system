@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {}
+    "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {}
   },
   "projects": {
-    "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {
+    "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
+        "projectUniqueName": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
         "projectName": "ModelLibrary",
-        "projectPath": "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
+        "projectPath": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
         "packagesPath": "C:\\Users\\Данька\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\homework\\FinalProject\\ModelLibrary\\obj\\",
+        "outputPath": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

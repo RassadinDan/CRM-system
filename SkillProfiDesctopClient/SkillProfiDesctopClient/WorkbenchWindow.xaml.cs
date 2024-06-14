@@ -47,6 +47,12 @@ namespace SkillProfiDesctopClient
 			window.Show();
 		}
 
+		private void BlogsBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			BlogsWindow window = new BlogsWindow();
+			window.Show();
+		}
+
 		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
 		{
 			ContactsWindow window = new ContactsWindow();
