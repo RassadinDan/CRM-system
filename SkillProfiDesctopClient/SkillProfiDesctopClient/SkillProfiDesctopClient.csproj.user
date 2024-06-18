@@ -23,6 +23,21 @@
     <Compile Update="OneProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\BlogsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OneProjectPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Page1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ProjectsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\WorkbenchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProjectsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +71,21 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OneProjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BlogsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OneProjectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Page1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ProjectsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WorkbenchPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProjectsWindow.xaml">

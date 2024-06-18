@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillProfiDesctopClient.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace SkillProfiDesctopClient
         public ServicesWindow()
         {
             InitializeComponent();
+
+            mainFrame.Source = new Uri("Pages/Page1.xaml", UriKind.Relative);
         }
     }
 }

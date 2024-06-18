@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj": {}
+    "D:\\work\\homework\\finalproject\\SkillProfiWebAPi\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj": {}
   },
   "projects": {
     "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj": {
@@ -83,14 +83,14 @@
         }
       }
     },
-    "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj": {
+    "D:\\work\\homework\\finalproject\\SkillProfiWebAPi\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj",
+        "projectUniqueName": "D:\\work\\homework\\finalproject\\SkillProfiWebAPi\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
         "projectName": "SkillProfiWebAPI",
-        "projectPath": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\SkillProfiWebAPI.csproj",
+        "projectPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPi\\SkillProfiWebAPI\\SkillProfiWebAPI.csproj",
         "packagesPath": "C:\\Users\\Данька\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\homework\\finalproject\\skillprofiwebapi\\skillprofiwebapi\\obj\\",
+        "outputPath": "D:\\work\\homework\\finalproject\\SkillProfiWebAPi\\SkillProfiWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

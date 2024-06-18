@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\App.xaml
-11975125387
+16-1097023057
 
-16947248938
+22615505539
 215-1588321971
-AuthWindow.xaml;BlogsWindow.xaml;ContactsWindow.xaml;CreateProjectWindow.xaml;MainWindow.xaml;OneBlogWindow.xaml;OneProjectWindow.xaml;ProjectsWindow.xaml;RegistrationWindow.xaml;ServicesWindow.xaml;WorkbenchWindow.xaml;
+AuthWindow.xaml;BlogsWindow.xaml;ContactsWindow.xaml;CreateProjectWindow.xaml;MainWindow.xaml;OneBlogWindow.xaml;OneProjectWindow.xaml;Pages\BlogsPage.xaml;Pages\OneProjectPage.xaml;Pages\Page1.xaml;Pages\ProjectsPage.xaml;Pages\WorkbenchPage.xaml;ProjectsWindow.xaml;RegistrationWindow.xaml;ServicesWindow.xaml;WorkbenchWindow.xaml;
 
-True
+False
 

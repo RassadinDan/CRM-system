@@ -60,3 +60,9 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneProjectWindow.baml
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneBlogWindow.g.cs
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\OneBlogWindow.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\Page1.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\Page1.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\WorkbenchPage.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\WorkbenchPage.baml
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\ProjectsPage.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\ProjectsPage.baml

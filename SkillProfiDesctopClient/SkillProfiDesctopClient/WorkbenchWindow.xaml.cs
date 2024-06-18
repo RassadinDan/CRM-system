@@ -25,26 +25,17 @@ namespace SkillProfiDesctopClient
 	/// </summary>
 	public partial class WorkbenchWindow : Window
 	{
-		private AdminDataService _dataService {get; set;}
-		public ObservableCollection<ModelLibrary.Applications.Application> Applications {get; set;}
+		//private AdminDataService _dataService {get; set;}
+		//public ObservableCollection<ModelLibrary.Applications.Application> Applications {get; set;}
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
-			var httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_dataService = new AdminDataService(httpClient);
-			Loaded += async (sender, e) =>
-			{
-				var data = await _dataService.GetApplicationsAsync();
-				Applications = new ObservableCollection<ModelLibrary.Applications.Application>(data);
-				ApplicationsListBox.ItemsSource = Applications;
-			};
+			mainFrame.Source = new Uri("Pages/WorkbenchPage.xaml", UriKind.Relative);
 		}
 
 		private void ProjectsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			ProjectsWindow window = new ProjectsWindow();
-			window.Show();
+			mainFrame.Source = new Uri("Pages/ProjectsPage.xaml", UriKind.Relative);
 		}
 
 		private void BlogsBut_OnClick(object sender, RoutedEventArgs e)
@@ -59,5 +50,15 @@ namespace SkillProfiDesctopClient
 			window.Show();
 		}
 
+		private void ServiceBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			ServicesWindow window = new ServicesWindow();
+			window.Show();
+		}
+
+		//private void MainBut_OnClick(object sender, RoutedEventArgs e)
+		//{
+
+		//}
 	}
 }

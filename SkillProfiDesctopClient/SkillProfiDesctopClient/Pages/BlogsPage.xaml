@@ -1,0 +1,82 @@
+﻿<Page x:Class="SkillProfiDesctopClient.Pages.BlogsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SkillProfiDesctopClient.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BlogsPage">
+    <Page.Resources>
+        <BitmapImage x:Key="defaultImage"
+         UriSource="../Images/default_image.jpg"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="324*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1"
+           Grid.Row="1"
+           HorizontalAlignment="Center"
+           FontSize="24"
+           Text="Блог"/>
+
+        <ListBox x:Name="BlogsListBox"
+         Grid.Column="1"
+         Grid.Row="2"
+         Grid.ColumnSpan="3"
+         Margin="10"
+         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         SelectionChanged="BlogsListBox_SelectionChanged">
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"
+                       ItemWidth="400"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment"
+                    Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1"
+                    BorderBrush="Black">
+
+                        <Grid Margin="10"
+                      VerticalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height = "100"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.Row="0"
+                                Height="100"
+                                Source="{Binding ImageData, TargetNullValue={StaticResource defaultImage}}"/>
+
+                            <StackPanel Grid.Row="1"
+                                Margin="5">
+                                <TextBlock Text="{Binding Preview}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

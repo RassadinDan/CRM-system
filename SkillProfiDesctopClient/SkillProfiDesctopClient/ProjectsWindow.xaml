@@ -82,6 +82,6 @@
                 Margin="5"
                 FontSize="18"
                 Content="Создать"
-                Click="CreateBut_OnClick"></Button>
+                Click="CreateBut_OnClick"/>
     </Grid>
 </Window>

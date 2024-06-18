@@ -43,37 +43,22 @@
             Margin="5"
             Content="Блог"
             Click="BlogsBut_OnClick"></Button>
-        
+
         <Button x:Name="ServicesBut"
             Grid.Row="5"
             Margin="5"
-            Content="Услуги"></Button>
-        
+            Content="Услуги"
+            Click="ServiceBut_OnClick"/>
+
         <Button x:Name="ContactsBut"
             Grid.Row="6"
             Margin="5"
             Content="Контакты"
             Click="ContactsBut_OnClick"></Button>
 
-        <ListBox x:Name="ApplicationsListBox"
-                 Grid.Column="1"
-                 Grid.Row="1"
-                 Grid.RowSpan="7"
-                 Margin="10">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock>
-                        <TextBlock.Text>
-                            <MultiBinding StringFormat="{}{0} {1} {2} {3}">
-                                <Binding Path="Name"></Binding>
-                                <Binding Path="Email"></Binding>
-                                <Binding Path="DateTime"></Binding>
-                                <Binding Path="Status"></Binding>
-                            </MultiBinding>
-                        </TextBlock.Text>
-                    </TextBlock>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <Frame x:Name="mainFrame"
+               Grid.Column="1"
+               Grid.RowSpan="8"
+               Margin="10"/>
     </Grid>
 </Window>

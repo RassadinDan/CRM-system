@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:SkillProfiDesctopClient"
         mc:Ignorable="d"
         Title="BlogsWindow" Height="450" Width="800">
+    <Window.Resources>
+        <BitmapImage x:Key="defaultImage"
+                 UriSource="./Images/default_image.jpg"></BitmapImage>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
@@ -54,12 +58,15 @@
                             BorderBrush="Black">
                         
                         <Grid Margin="10"
-                              HorizontalAlignment="Stretch">
+                              VerticalAlignment="Stretch">
                             <Grid.RowDefinitions>
-                                
+                                <RowDefinition Height = "100"/>
+                                <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <Image/>
+                            <Image Grid.Row="0"
+                                   Height="100"
+                                Source="{Binding ImageData, TargetNullValue={StaticResource defaultImage}}"/>
 
                             <StackPanel Grid.Row="1"
                                         Margin="5">
