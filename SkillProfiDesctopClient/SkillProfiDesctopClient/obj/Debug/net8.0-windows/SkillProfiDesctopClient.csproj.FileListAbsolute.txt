@@ -66,3 +66,9 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\WorkbenchPage.baml
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\ProjectsPage.g.cs
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\ProjectsPage.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\BlogsPage.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\OneBlogPage.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\OneProjectPage.g.cs
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\BlogsPage.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\OneBlogPage.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\OneProjectPage.baml

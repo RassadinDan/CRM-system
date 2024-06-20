@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ModelLibrary.Projects
 {
-	public class ProjectModel
+	public class ProjectModel : Project
 	{
-		public int? Id {  get; set; } 
-		public string Preview {  get; set; }
-		public string Description { get; set; }
+		//public int? Id {  get; set; } 
+		//public string Preview {  get; set; }
+		//public string Description { get; set; }
 
 		public IFormFile? ImageFile { get; set; }
 		public string? ImageDataUrl { get; set; }

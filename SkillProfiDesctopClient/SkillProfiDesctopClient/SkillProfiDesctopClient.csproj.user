@@ -26,6 +26,9 @@
     <Compile Update="Pages\BlogsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\OneBlogPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\OneProjectPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -74,6 +77,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\BlogsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OneBlogPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\OneProjectPage.xaml">

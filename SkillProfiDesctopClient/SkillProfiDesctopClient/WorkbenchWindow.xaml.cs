@@ -40,8 +40,7 @@ namespace SkillProfiDesctopClient
 
 		private void BlogsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			BlogsWindow window = new BlogsWindow();
-			window.Show();
+			mainFrame.Source = new Uri("Pages/BlogsPage.xaml", UriKind.Relative);
 		}
 
 		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
