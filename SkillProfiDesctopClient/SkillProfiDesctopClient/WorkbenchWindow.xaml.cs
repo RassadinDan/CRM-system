@@ -25,8 +25,6 @@ namespace SkillProfiDesctopClient
 	/// </summary>
 	public partial class WorkbenchWindow : Window
 	{
-		//private AdminDataService _dataService {get; set;}
-		//public ObservableCollection<ModelLibrary.Applications.Application> Applications {get; set;}
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
@@ -54,10 +52,5 @@ namespace SkillProfiDesctopClient
 			ServicesWindow window = new ServicesWindow();
 			window.Show();
 		}
-
-		//private void MainBut_OnClick(object sender, RoutedEventArgs e)
-		//{
-
-		//}
 	}
 }
