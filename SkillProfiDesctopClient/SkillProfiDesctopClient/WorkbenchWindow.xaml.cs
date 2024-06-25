@@ -17,6 +17,9 @@ using System.Net.Http;
 using Microsoft.Extensions.Http;
 using System.Net.Http.Headers;
 using System.Collections.ObjectModel;
+using SkillProfiDesctopClient.Pages;
+using ModelLibrary.Projects;
+using ModelLibrary.Blogs;
 
 namespace SkillProfiDesctopClient
 {
@@ -28,17 +31,31 @@ namespace SkillProfiDesctopClient
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
-			mainFrame.Source = new Uri("Pages/WorkbenchPage.xaml", UriKind.Relative);
+			mainFrame.Navigate(new WorkbenchPage());
 		}
 
 		private void ProjectsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			mainFrame.Source = new Uri("Pages/ProjectsPage.xaml", UriKind.Relative);
+			var page = new ProjectsPage();
+			mainFrame.Navigate(page);
+			page.ProjectsListBox.SelectionChanged += (s, e) => 
+			{
+				Project project = page.ProjectsListBox.SelectedItem as Project;
+				OneProjectPage oneProject = new OneProjectPage(project);
+				mainFrame.Navigate(oneProject);
+			};
 		}
 
 		private void BlogsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			mainFrame.Source = new Uri("Pages/BlogsPage.xaml", UriKind.Relative);
+			var page = new BlogsPage();
+			mainFrame.Navigate(page);
+			page.BlogsListBox.SelectionChanged += (s, e) =>
+			{
+				Blog blog = page.BlogsListBox.SelectedItem as Blog;
+				OneBlogPage oneBlog = new OneBlogPage(blog);
+				mainFrame.Navigate(oneBlog);
+			};
 		}
 
 		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)

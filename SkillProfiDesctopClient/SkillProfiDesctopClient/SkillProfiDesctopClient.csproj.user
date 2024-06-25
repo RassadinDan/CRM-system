@@ -5,9 +5,6 @@
     <Compile Update="AuthWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="BlogsWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="ContactsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,12 +12,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="OneBlogWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="OneProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\BlogsPage.xaml.cs">
@@ -41,9 +32,6 @@
     <Compile Update="Pages\WorkbenchPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ProjectsWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="RegistrationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,9 +46,6 @@
     <Page Update="AuthWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="BlogsWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="ContactsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -68,12 +53,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="OneBlogWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="OneProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\BlogsPage.xaml">
@@ -92,9 +71,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\WorkbenchPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ProjectsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegistrationWindow.xaml">

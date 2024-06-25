@@ -48,11 +48,11 @@ namespace SkillProfiDesctopClient.Pages
 			window.Show();
 		}
 
-		private void ProjectsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			Project project = ProjectsListBox.SelectedItem as Project;
-			OneProjectWindow window = new OneProjectWindow(project);
-			window.Show();
-		}
+		//private void ProjectsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		//{
+		//	Project project = ProjectsListBox.SelectedItem as Project;
+		//	OneProjectWindow window = new OneProjectWindow(project);
+		//	window.Show();
+		//}
 	}
 }

@@ -42,11 +42,11 @@ namespace SkillProfiDesctopClient.Pages
 			};
 		}
 
-		private void BlogsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			Blog blog = BlogsListBox.SelectedItem as Blog;
-			OneBlogPage page = new OneBlogPage(blog);
-			//page.;
-		}
+		//private void BlogsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		//{
+		//	Blog blog = BlogsListBox.SelectedItem as Blog;
+		//	OneBlogPage page = new OneBlogPage(blog);
+		//	//page.;
+		//}
 	}
 }

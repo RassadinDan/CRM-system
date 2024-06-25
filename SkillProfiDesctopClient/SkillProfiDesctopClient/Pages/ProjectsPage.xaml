@@ -38,8 +38,7 @@
           Grid.Row="2"
           Grid.ColumnSpan="3"
           Margin="10,10,10,10"
-          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-          SelectionChanged="ProjectsListBox_SelectionChanged">
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
