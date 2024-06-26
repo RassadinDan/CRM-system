@@ -1,11 +1,8 @@
 ﻿using ModelLibrary.Data;
-using ModelLibrary.Projects;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Net.Http.Headers;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,35 +14,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ModelLibrary.Contacts;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace SkillProfiDesctopClient.Pages
 {
 	/// <summary>
-	/// Логика взаимодействия для ProjectsPage.xaml
+	/// Логика взаимодействия для ContactsPage.xaml
 	/// </summary>
-	public partial class ProjectsPage : Page
+	public partial class ContactsPage : Page
 	{
-		private ProjectDataService _projectData;
-		public ObservableCollection<Project> Projects;
-		public ProjectsPage()
+		private ContactDataService _contactData;
+		public ObservableCollection<Contact> Contacts;
+		public ContactsPage()
 		{
 			InitializeComponent();
 			HttpClient httpClient = new HttpClient();
 			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_projectData = new ProjectDataService(httpClient);
+			_contactData = new ContactDataService(httpClient);
 
 			Loaded += async (sender, e) =>
 			{
-				IEnumerable<Project> data = await _projectData.GetProjectsAsync();
-				Projects = new ObservableCollection<Project>(data);
-				ProjectsListBox.ItemsSource = Projects;
+				IEnumerable<Contact> data = await _contactData.GetContactsAsync();
+				Contacts = new ObservableCollection<Contact>(data);
+				ContactsListBox.ItemsSource = Contacts;
 			};
-		}
-
-		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
-		{
-			CreateProjectWindow window = new CreateProjectWindow();
-			window.Show();
 		}
 	}
 }

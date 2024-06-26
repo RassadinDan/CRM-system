@@ -17,6 +17,9 @@
     <Compile Update="Pages\BlogsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\ContactsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\OneBlogPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +30,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\ProjectsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ServicesPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\WorkbenchPage.xaml.cs">
@@ -58,6 +64,9 @@
     <Page Update="Pages\BlogsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\ContactsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\OneBlogPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -68,6 +77,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ProjectsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServicesPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\WorkbenchPage.xaml">

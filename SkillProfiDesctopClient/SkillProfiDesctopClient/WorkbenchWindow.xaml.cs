@@ -36,7 +36,7 @@ namespace SkillProfiDesctopClient
 
 		private void ProjectsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			var page = new ProjectsPage();
+			ProjectsPage page = new ProjectsPage();
 			mainFrame.Navigate(page);
 			page.ProjectsListBox.SelectionChanged += (s, e) => 
 			{
@@ -48,7 +48,7 @@ namespace SkillProfiDesctopClient
 
 		private void BlogsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			var page = new BlogsPage();
+			BlogsPage page = new BlogsPage();
 			mainFrame.Navigate(page);
 			page.BlogsListBox.SelectionChanged += (s, e) =>
 			{
@@ -60,14 +60,14 @@ namespace SkillProfiDesctopClient
 
 		private void ContactsBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			ContactsWindow window = new ContactsWindow();
-			window.Show();
+			ContactsPage page = new ContactsPage();
+			mainFrame.Navigate(page);
 		}
 
 		private void ServiceBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			ServicesWindow window = new ServicesWindow();
-			window.Show();
+			ServicesPage page = new ServicesPage();
+			mainFrame.Navigate(page);
 		}
 	}
 }
