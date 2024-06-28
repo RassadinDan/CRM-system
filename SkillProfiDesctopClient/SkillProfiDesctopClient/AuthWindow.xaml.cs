@@ -42,16 +42,9 @@ namespace SkillProfiDesctopClient
 				AuthSession.IsAuthenticated = true;
 				AuthSession.User = result.User;
 				AuthSession.Token = result.Token;
-				if(AuthSession.User.Role == "Administrator")
-				{
-					var workbench = new WorkbenchWindow();
-					workbench.Show();
-				}
-				else
-				{
-					var main = new MainWindow();
-					main.Show();
-				}
+
+				var workbench = new WorkbenchWindow();
+				workbench.Show();
 				this.Close();
 			}
 		}

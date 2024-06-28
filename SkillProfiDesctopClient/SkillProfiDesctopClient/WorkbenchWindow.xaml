@@ -25,24 +25,25 @@
         <Button x:Name="WorkbenchBut"
             Grid.Row="1"
             Margin="5"
-            Content="Рабочий стол"></Button>
-        
+            Content="Рабочий стол"
+            Click="WorkbenchBut_OnClick"/>
+
         <Button x:Name="MainBut"
             Grid.Row="2"
             Margin="5"
-            Content="Главная"></Button>
-        
+            Content="Главная"/>
+
         <Button x:Name="ProjectsBut"
             Grid.Row="3"
             Margin="5"
             Content="Проекты"
-            Click="ProjectsBut_OnClick"></Button>
-        
+            Click="ProjectsBut_OnClick"/>
+
         <Button x:Name="BlogsBut"
             Grid.Row="4"
             Margin="5"
             Content="Блог"
-            Click="BlogsBut_OnClick"></Button>
+            Click="BlogsBut_OnClick"/>
 
         <Button x:Name="ServicesBut"
             Grid.Row="5"
@@ -54,11 +55,12 @@
             Grid.Row="6"
             Margin="5"
             Content="Контакты"
-            Click="ContactsBut_OnClick"></Button>
+            Click="ContactsBut_OnClick"/>
 
         <Frame x:Name="mainFrame"
                Grid.Column="1"
                Grid.RowSpan="8"
                Margin="10"/>
+        
     </Grid>
 </Window>

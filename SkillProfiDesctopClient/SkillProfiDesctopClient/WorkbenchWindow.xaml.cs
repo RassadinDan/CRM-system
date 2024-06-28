@@ -31,7 +31,21 @@ namespace SkillProfiDesctopClient
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
-			mainFrame.Navigate(new WorkbenchPage());
+
+			if (AuthSession.User.Role == "Administrator")
+			{
+				mainFrame.Navigate(new WorkbenchPage());
+			}
+			else
+			{
+				mainFrame.Navigate(new NewApplicationPage());
+			}
+		}
+
+		private void WorkbenchBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			WorkbenchPage page = new WorkbenchPage();
+			mainFrame.Navigate(page);
 		}
 
 		private void ProjectsBut_OnClick(object sender, RoutedEventArgs e)
