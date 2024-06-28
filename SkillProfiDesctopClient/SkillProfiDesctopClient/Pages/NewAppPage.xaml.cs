@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SkillProfiDesctopClient.Pages
 {
 	/// <summary>
-	/// Логика взаимодействия для NewApplicationPage.xaml
+	/// Логика взаимодействия для NewAppPage.xaml
 	/// </summary>
-	public partial class NewApplicationPage : Page
+	public partial class NewAppPage : Page
 	{
-		public NewApplicationPage()
+		public NewAppPage()
 		{
 			InitializeComponent();
 		}

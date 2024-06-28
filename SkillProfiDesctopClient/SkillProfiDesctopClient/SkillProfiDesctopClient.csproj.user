@@ -23,13 +23,16 @@
     <Compile Update="Pages\OneProjectPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\NewApplicationPage.xaml.cs">
+    <Compile Update="Pages\NewAppPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\ProjectsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\ServicesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UpdateUIPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\WorkbenchPage.xaml.cs">
@@ -67,13 +70,16 @@
     <Page Update="Pages\OneProjectPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\NewApplicationPage.xaml">
+    <Page Update="Pages\NewAppPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ProjectsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ServicesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UpdateUIPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\WorkbenchPage.xaml">

@@ -38,7 +38,20 @@ namespace SkillProfiDesctopClient
 			}
 			else
 			{
-				mainFrame.Navigate(new NewApplicationPage());
+				mainFrame.Navigate(new NewAppPage());
+				WorkbenchBut.Visibility = Visibility.Hidden;
+			}
+		}
+
+		private void MainBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			if (AuthSession.User.Role == "Administrator")
+			{
+				mainFrame.Navigate(new UpdateUIPage());
+			}
+			else
+			{
+				mainFrame.Navigate(new NewAppPage());
 			}
 		}
 
