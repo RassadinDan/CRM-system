@@ -13,6 +13,11 @@ namespace ModelLibrary.Data
 			_httpClient = httpClientFactory.CreateClient("AuthorizedClient");
 		}
 
+		public UISettingsManager(HttpClient httpClient)
+		{
+			_httpClient = httpClient;
+		}
+
 		public MainSettings GetSettings()
 		{
 			var url = "https://localhost:7044/api/admin/getSettings";

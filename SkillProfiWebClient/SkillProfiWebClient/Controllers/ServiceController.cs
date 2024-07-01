@@ -34,7 +34,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var service = await _serviceData.GetServiceByIdAsync(id);
-				return Ok(service);
+				return View(service);
 			}
 			catch (Exception ex)
 			{

@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient.Pages
 {
@@ -30,9 +31,7 @@ namespace SkillProfiDesctopClient.Pages
 		public BlogsPage()
 		{
 			InitializeComponent();
-			HttpClient httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_blogDataService = new BlogDataService(httpClient);
+			_blogDataService = new BlogDataService(Connection.httpClient);
 
 			Loaded += async (sender, e) =>
 			{
@@ -42,11 +41,17 @@ namespace SkillProfiDesctopClient.Pages
 			};
 		}
 
-		//private void BlogsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		//{
-		//	Blog blog = BlogsListBox.SelectedItem as Blog;
-		//	OneBlogPage page = new OneBlogPage(blog);
-		//	//page.;
-		//}
+		public async void Delete(int id)
+		{
+			bool res = await _blogDataService.DeleteBlogAsync(id);
+			if (res)
+			{
+				MessageBox.Show("Запись удалена", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+			}
+			else
+			{
+				MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
 	}
 }

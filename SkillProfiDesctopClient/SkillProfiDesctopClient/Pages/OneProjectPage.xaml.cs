@@ -28,8 +28,8 @@ namespace SkillProfiDesctopClient.Pages
 		{
 			InitializeComponent();
 			this.Project = project;
-			PreviewBox.Text = Project.Preview;
-			DescriptionBox.Text = Project.Description;
+			PreviewBlock.Text = Project.Preview;
+			DescriptionBlock.Text = Project.Description;
 			ProjectImage.Source = ImageLoader.LoadImage(Project.ImageData);
 		}
 	}

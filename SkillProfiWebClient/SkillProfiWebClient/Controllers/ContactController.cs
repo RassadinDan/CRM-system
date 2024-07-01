@@ -97,7 +97,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _contactData.DeleteContactAsync(id);
-				return Ok();
+				return RedirectToAction("GetContacts");
 			}
 			catch(Exception ex)
 			{

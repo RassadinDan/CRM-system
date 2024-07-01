@@ -13,7 +13,7 @@
 			string imageBase64Data = Convert.ToBase64String(project.ImageData);
 			<div class="card">
 				<div class="card-top">
-					<a asp-controller="Project" asp-action="GetProject" asp-route-id="@project.Id" class="card-img">
+					<a asp-controller="Project" asp-action="getone" asp-route-id="@project.Id" class="card-img">
 						<img src="@string.Format("data:image/jpeg;base64,{0}",imageBase64Data)" alt="ProjectImage" style="width: 350px; height: auto"/>
 					</a>
 				</div>

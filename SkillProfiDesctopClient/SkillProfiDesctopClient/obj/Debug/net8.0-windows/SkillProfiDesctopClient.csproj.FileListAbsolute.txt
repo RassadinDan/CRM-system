@@ -68,3 +68,4 @@ D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\ref\SkillProfiDesctopClient.dll
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\UpdateUIPage.g.cs
 D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\UpdateUIPage.baml
+D:\Work\Homework\FinalProject\SkillProfiDesctopClient\SkillProfiDesctopClient\bin\Debug\net8.0-windows\System.Drawing.Common.dll

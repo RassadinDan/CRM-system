@@ -27,5 +27,20 @@ namespace SkillProfiDesctopClient.Tools
 			image.Freeze();
 			return image;
 		}
+
+		public static byte[] ByteFromBitmapImage(BitmapImage image)
+		{
+			Stream stream = image.StreamSource;
+			byte[] imagebyte = null;
+			if (stream != null && stream.Length > 0)
+			{
+				using (BinaryReader br = new BinaryReader(stream))
+				{
+					imagebyte = br.ReadBytes((Int32)stream.Length);
+				}
+			}
+
+			return imagebyte;
+		}
 	}
 }

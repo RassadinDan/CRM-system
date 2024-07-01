@@ -1,0 +1,32 @@
+﻿@using ModelLibrary.Blogs;
+@model Blog
+@{
+	ViewData["Title"] = Model.Name;
+}
+
+<html>
+	<body>
+		<h2>@ViewData["Title"]</h2>
+		<div>
+			@Model.Preview
+		</div>
+		<div>
+			@Model.Description
+		</div>
+		<div>
+			@{
+				string imageBase64Data = Convert.ToBase64String(Model.ImageData);
+				<img src="@string.Format("data:image/jpeg;base64,{0}",imageBase64Data)" alt="ProjectImage" style="width: 500px; height: auto" />
+			}
+		</div>
+		@if(AuthSession.User != null && AuthSession.User.Role == "Administrator")
+		{
+			<div>
+				<a asp-controller="Blog" asp-action="UpdateForm" asp-route-id="@Model.Id">Обновить</a>
+			</div>
+			<div>
+				<a asp-controller="Blog" asp-action="Delete" asp-route-id="@Model.Id">Удалить</a>
+			</div>
+		}
+	</body>
+</html>

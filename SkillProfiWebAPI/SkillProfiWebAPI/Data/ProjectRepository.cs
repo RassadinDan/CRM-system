@@ -44,6 +44,10 @@ namespace SkillProfiWebAPI.Data
 					project.ImageContentType = model.ImageFile.ContentType;
 				}
 			}
+			if (model.ImageData != null)
+			{
+				project.ImageData = model.ImageData;
+			}
 			_db.Projects.Add(project);
 			_db.SaveChanges();
 		}

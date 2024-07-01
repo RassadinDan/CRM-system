@@ -34,7 +34,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var blog = await _blogDataService.GetByIdAsync(id);
-				return Ok(blog);
+				return View(blog);
 			}
 			catch(Exception ex)
 			{

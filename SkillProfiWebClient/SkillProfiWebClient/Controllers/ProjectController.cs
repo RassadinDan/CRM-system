@@ -34,7 +34,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				var project = await _projectData.GetProjectByIdAsync(id);
-				return Ok(project);
+				return View(project);
 			}
 			catch(Exception ex)
 			{
@@ -72,7 +72,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _projectData.CreateProjectAsync(model);
-				return Ok();
+				return RedirectToAction("GetProjects");
 			}
 			catch(Exception ex)
 			{
@@ -86,7 +86,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _projectData.UpdateProjectAsync(id, model);
-				return Ok();
+				return RedirectToAction("GetProjects");
 			}
 			catch(Exception ex)
 			{
@@ -100,7 +100,7 @@ namespace SkillProfiWebClient.Controllers
 			try
 			{
 				await _projectData.DeleteProjectAsync(id);
-				return Ok();
+				return RedirectToAction("GetProjects");
 			}
 			catch(Exception ex)
 			{

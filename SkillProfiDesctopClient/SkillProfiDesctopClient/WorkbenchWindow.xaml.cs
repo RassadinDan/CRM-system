@@ -20,6 +20,8 @@ using System.Collections.ObjectModel;
 using SkillProfiDesctopClient.Pages;
 using ModelLibrary.Projects;
 using ModelLibrary.Blogs;
+using SkillProfiDesctopClient.Tools;
+using ModelLibrary.UISettings;
 
 namespace SkillProfiDesctopClient
 {
@@ -28,9 +30,12 @@ namespace SkillProfiDesctopClient
 	/// </summary>
 	public partial class WorkbenchWindow : Window
 	{
+		private UISettingsManager _settingsManager;
+		public MainSettings Settings { get; set; }
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
+			_settingsManager = new UISettingsManager(Connection.httpClient);
 
 			if (AuthSession.User.Role == "Administrator")
 			{
@@ -41,13 +46,20 @@ namespace SkillProfiDesctopClient
 				mainFrame.Navigate(new NewAppPage());
 				WorkbenchBut.Visibility = Visibility.Hidden;
 			}
+
+			Settings = _settingsManager.GetSettings();
+			MainBut.Content = Settings.MainHeader;
+			ProjectsBut.Content = Settings.ProjectsHeader;
+			BlogsBut.Content = Settings.BlogHeader;
+			ServicesBut.Content = Settings.ServicesHeader;
+			ContactsBut.Content = Settings.ContactsHeader;
 		}
 
 		private void MainBut_OnClick(object sender, RoutedEventArgs e)
 		{
 			if (AuthSession.User.Role == "Administrator")
 			{
-				mainFrame.Navigate(new UpdateUIPage());
+				mainFrame.Navigate(new UpdateUIPage(Settings));
 			}
 			else
 			{
@@ -70,6 +82,24 @@ namespace SkillProfiDesctopClient
 				Project project = page.ProjectsListBox.SelectedItem as Project;
 				OneProjectPage oneProject = new OneProjectPage(project);
 				mainFrame.Navigate(oneProject);
+
+				if(AuthSession.User.Role == "Administrator")
+				{
+					oneProject.UpdateBut.Click += (s, e) =>
+					{
+					};
+
+					oneProject.DeleteBut.Click += (s, e) =>
+					{
+						page.Delete(oneProject.Project.Id);
+						mainFrame.Navigate(page);
+					};
+				}
+				else
+				{
+					oneProject.DeleteBut.Visibility = Visibility.Hidden;
+					oneProject.UpdateBut.Visibility = Visibility.Hidden;
+				}
 			};
 		}
 
@@ -77,11 +107,31 @@ namespace SkillProfiDesctopClient
 		{
 			BlogsPage page = new BlogsPage();
 			mainFrame.Navigate(page);
+
 			page.BlogsListBox.SelectionChanged += (s, e) =>
 			{
 				Blog blog = page.BlogsListBox.SelectedItem as Blog;
 				OneBlogPage oneBlog = new OneBlogPage(blog);
 				mainFrame.Navigate(oneBlog);
+
+				if (AuthSession.User.Role == "Administrator")
+				{
+					oneBlog.UpdateBut.Click += (s, e) =>
+					{
+
+					};
+
+					oneBlog.DeleteBut.Click += (s, e) =>
+					{
+						page.Delete(oneBlog.Blog.Id); 
+						mainFrame.Navigate(page);
+					};
+				}
+				else
+				{
+					oneBlog.UpdateBut.Visibility = Visibility.Hidden;
+					oneBlog.DeleteBut.Visibility= Visibility.Hidden;
+				}
 			};
 		}
 

@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Net.Http;
 using ModelLibrary.Auth;
 using ModelLibrary.Auth.Dto;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient
 {
@@ -29,7 +30,8 @@ namespace SkillProfiDesctopClient
 
 		private async void LogInBut_OnClick(object sender, RoutedEventArgs e)
 		{
-			var authService = new AuthService(new HttpClient());
+			HttpClient httpClient = new HttpClient();
+			var authService = new AuthService(httpClient);
 			var authRequest = new LoginRequest
 			{
 				UserName = UsernameBox.Text,
@@ -42,6 +44,8 @@ namespace SkillProfiDesctopClient
 				AuthSession.IsAuthenticated = true;
 				AuthSession.User = result.User;
 				AuthSession.Token = result.Token;
+				httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", AuthSession.Token);
+				Connection.httpClient = httpClient;
 
 				var workbench = new WorkbenchWindow();
 				workbench.Show();

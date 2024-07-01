@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d60a1FSG+NgWscbdbv3ciEuK+BR1jcp4NrqwWEAxARjhJYMsrJ8MiKsLzD9AHmgCfybHgsjuwUVzt8TVeY04fg==",
+  "dgSpecHash": "P5MFNLVPq9Q=",
   "success": true,
-  "projectFilePath": "D:\\work\\homework\\finalproject\\skillprofiwebclient\\skillprofiwebclient\\SkillProfiWebClient.csproj",
+  "projectFilePath": "D:\\work\\homework\\finalproject\\SkillProfiWebClient\\SkillProfiWebClient\\SkillProfiWebClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.3\\microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",

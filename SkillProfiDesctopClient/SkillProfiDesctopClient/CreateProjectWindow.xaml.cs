@@ -16,6 +16,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net.Http.Headers;
+using SkillProfiDesctopClient.Tools;
+using static System.Net.Mime.MediaTypeNames;
+using System.IO;
+using System.Drawing;
 
 namespace SkillProfiDesctopClient
 {
@@ -26,11 +30,11 @@ namespace SkillProfiDesctopClient
     {
         private HttpClient client;
         private ProjectDataService _projectData;
+        private byte[] imageBytes;
         public CreateProjectWindow()
         {
             InitializeComponent();
-            client = new HttpClient();
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
+            client = Connection.httpClient;
             _projectData = new ProjectDataService(client);
         }
 
@@ -41,8 +45,11 @@ namespace SkillProfiDesctopClient
             if(fileDialog.ShowDialog() == true)
             {
                 string fileName = fileDialog.FileName;
-                ProjectImage.Source = new BitmapImage(new Uri(fileName));
-            }
+                var image = new BitmapImage(new Uri(fileName));
+                ProjectImage.Source = image;
+
+                imageBytes = ImageLoader.ByteFromBitmapImage(image);
+			}
 		}
 
 		private async void CreateBut_ClickAsync(object sender, RoutedEventArgs e)
@@ -53,6 +60,7 @@ namespace SkillProfiDesctopClient
                 {
                     Preview = PreviewBox.Text,
                     Description = DescriptionBox.Text,
+                    ImageData = imageBytes
                 };
                 bool res = await _projectData.CreateProjectAsync(model);
                 if (res)

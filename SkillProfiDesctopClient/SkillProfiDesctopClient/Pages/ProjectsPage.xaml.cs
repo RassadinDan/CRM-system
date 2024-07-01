@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient.Pages
 {
@@ -30,9 +31,7 @@ namespace SkillProfiDesctopClient.Pages
 		public ProjectsPage()
 		{
 			InitializeComponent();
-			HttpClient httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_projectData = new ProjectDataService(httpClient);
+			_projectData = new ProjectDataService(Connection.httpClient);
 
 			Loaded += async (sender, e) =>
 			{
@@ -40,6 +39,19 @@ namespace SkillProfiDesctopClient.Pages
 				Projects = new ObservableCollection<Project>(data);
 				ProjectsListBox.ItemsSource = Projects;
 			};
+		}
+
+		public async void Delete(int id)
+		{
+			bool res = await _projectData.DeleteProjectAsync(id);
+			if (res)
+			{
+				MessageBox.Show("Запись удалена", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+			}
+			else 
+			{
+				MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 
 		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
