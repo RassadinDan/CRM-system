@@ -25,7 +25,9 @@
                                 <a class="nav-link text-dark" asp-area="">@AuthSession.User.UserName</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Выйти</a>
+                                <form class="nav-link text-dark" asp-controller="Auth" asp-action="Logout">
+                                    <input type="submit" value="Выйти" class="nav-link text-dark"/>
+                                    </form>
                             </li>
                         </ul>
                     }
@@ -33,7 +35,7 @@
                     {
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Войти</a>
+                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Войти</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Register">Зарегистрироваться</a>

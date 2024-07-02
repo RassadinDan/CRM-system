@@ -23,7 +23,26 @@
 				<div>
 					Электронная почта: @c.Email
 				</div>
+
+				@if(AuthSession.User != null && AuthSession.User.Role == "Administrator")
+				{
+					<div class="btn btn-light">
+						<a asp-controller="Contact" asp-action="UpdateForm" asp-route-id="@c.Id">Обновить</a>
+					</div>
+					<div class="btn btn-light">
+						<form asp-controller="Contact" asp-action="DeleteContact" asp-route-id="@c.Id">
+							<input type="submit" value="Удалить" />
+							</form>
+					</div>
+				}
 			</div>
 		}
+
+			@if (AuthSession.User != null && AuthSession.User.Role == "Administrator")
+			{
+				<div class="btn btn-light">
+					<a asp-controller="Contact" asp-action="CreateForm">Создать</a>
+				</div>
+			}
 	</body>
 </html>

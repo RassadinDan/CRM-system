@@ -14,7 +14,7 @@
 		<h2 class="title">
 			@ViewData["Title"]
 		</h2>
-		@using(Html.BeginForm("Register", "Auth", FormMethod.Post))
+		@using(Html.BeginForm("RegisterPost", "Auth", FormMethod.Post))
 		{
 			<div class="form-group">
 				@Html.LabelFor(model=>model.UserName)

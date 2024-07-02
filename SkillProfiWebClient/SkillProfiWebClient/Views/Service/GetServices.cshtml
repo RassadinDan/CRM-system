@@ -15,7 +15,9 @@
 					<summary>@service.Name</summary>
 					<p>@service.Description</p>
 					<a asp-action="UpdateForm" asp-controller="Service" asp-route-id="@service.Id" class="btn btn-primary">Изменить</a>
-					<a asp-action="DeleteService" asp-controller="Service" asp-route-id="@service.Id" class="btn btn-primary">Удалить</a>
+					<form asp-action="DeleteService" asp-controller="Service" asp-route-id="@service.Id" class="btn btn-primary">
+						<input type="submit" value="Удалить" />
+						</form>
 				</details>
 			</div>
 		}

@@ -5,6 +5,7 @@ using ModelLibrary.Auth;
 
 namespace SkillProfiWebClient.Controllers
 {
+	[Route("[controller]")]
 	public class AuthController : Controller
 	{
 		private readonly AuthService _authService;
@@ -15,17 +16,16 @@ namespace SkillProfiWebClient.Controllers
 			_logger = logger;
 		}
 		
-		[HttpGet]
+		[HttpGet("login")]
 		public IActionResult Login()
 		{
 			return View(new LoginRequest());
 		}
 
 
-		// TODO Несмотря на все старания, авторизация после входа не работает, код 403 (Forbidden)
 
-		[HttpPost]
-		public async Task<IActionResult> Login(LoginRequest model)
+		[HttpPost("loginpost")]
+		public async Task<IActionResult> LoginPost(LoginRequest model)
 		{
 			var r = await _authService.LoginAsync(model);
 			_logger.Log(LogLevel.Information, $"{r.User.UserName}===>{r.Token}");
@@ -34,7 +34,7 @@ namespace SkillProfiWebClient.Controllers
 				AuthSession.User = r.User;
 				AuthSession.Token = r.Token;
 				AuthSession.IsAuthenticated = true;
-				//_authService._httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
+
 				if (AuthSession.User.Role == "Administrator")
 				{
 					return RedirectToAction("Workbench", "Admin");
@@ -47,14 +47,14 @@ namespace SkillProfiWebClient.Controllers
 			return BadRequest(new { message = "Something go wrong" });
 		}
 
-		[HttpGet]
+		[HttpGet("register")]
 		public IActionResult Register()
 		{
 			return View();
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> Register(RegistrationRequest model)
+		[HttpPost("registerpost")]
+		public async Task<IActionResult> RegisterPost(RegistrationRequest model)
 		{
 			var r = await _authService.RegisterAsync(model);
 			if(r == true)
@@ -67,7 +67,7 @@ namespace SkillProfiWebClient.Controllers
 			}
 		}
 
-		[HttpPost]
+		[HttpPost("logout")]
 		public async Task<IActionResult> Logout()
 		{
 			var r = await _authService.LogoutAsync();

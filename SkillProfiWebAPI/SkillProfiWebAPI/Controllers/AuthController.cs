@@ -51,6 +51,7 @@ namespace SkillProfiWebAPI.Controllers
 		public async Task<IActionResult> LogoutAsync()
 		{
 			Response.Headers.Remove("Authorization");
+			await Task.CompletedTask;
 			return Ok(new {message = "Logout succeeded"});
 		}
 	}

@@ -8,10 +8,12 @@ namespace SkillProfiWebClient.Controllers
 	public class ContactController : Controller
 	{
 		private readonly ContactDataService _contactData;
+		private ILogger<ContactController> _logger;
 
-		public ContactController(ContactDataService contactData)
+		public ContactController(ContactDataService contactData, ILogger<ContactController> logger)
 		{
 			_contactData = contactData;
+			_logger = logger;
 		}
 
 		[HttpGet("getall")]
@@ -96,8 +98,16 @@ namespace SkillProfiWebClient.Controllers
 		{
 			try
 			{
-				await _contactData.DeleteContactAsync(id);
-				return RedirectToAction("GetContacts");
+				bool res = await _contactData.DeleteContactAsync(id);
+				if (res)
+				{
+					return RedirectToAction("GetContacts");
+				}
+				else 
+				{
+					_logger.LogWarning("Error while deleting a contact");
+					return RedirectToAction("Error");
+				}
 			}
 			catch(Exception ex)
 			{
