@@ -33,11 +33,31 @@ namespace SkillProfiDesctopClient.Pages
 			_settingsManager = new UISettingsManager(Connection.httpClient);
 			_settings = settings;
 
-			MainBox.Text = settings.MainHeader;
-			ProjectsBox.Text = settings.ProjectsHeader;
-			BlogsBox.Text = settings.BlogHeader;
-			ServicesBox.Text = settings.ServicesHeader;
-			ContactsBox.Text = settings.ContactsHeader;
+			MainBox.Text = _settings.MainHeader;
+			ProjectsBox.Text = _settings.ProjectsHeader;
+			BlogsBox.Text = _settings.BlogHeader;
+			ServicesBox.Text = _settings.ServicesHeader;
+			ContactsBox.Text = _settings.ContactsHeader;
+		}
+
+		private async void UpdateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			_settings.MainHeader = MainBox.Text;
+			_settings.ProjectsHeader = ProjectsBox.Text;
+			_settings.BlogHeader = BlogsBox.Text;
+			_settings.ServicesHeader = ServicesBox.Text;
+			_settings.ContactsHeader = ContactsBox.Text;
+
+			bool res = await _settingsManager.UpdateSettings(_settings);
+			if (res)
+			{ 
+				MessageBox.Show("Заголовки успешно обновлены", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+			}
+			else
+			{
+                MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
 		}
 	}
 }

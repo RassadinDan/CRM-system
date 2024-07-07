@@ -51,11 +51,11 @@
                     <li class="nav-item">
                         @if(AuthSession.User != null && AuthSession.User.Role == "Guest")
                         {
-                            <a class="nav-link text-dark" asp-action="Main" asp-controller="Guest">Главная</a>
+                            <a class="nav-link text-dark" asp-action="Main" asp-controller="Guest">@MenuHeaders.Settings.MainHeader</a>
                         }
                         @if (AuthSession.User != null && AuthSession.User.Role == "Administrator")
                         {
-                            <a class="nav-link text-dark" asp-action="Main" asp-controller="Admin">Главная</a>
+                                <a class="nav-link text-dark" asp-action="Main" asp-controller="Admin">@MenuHeaders.Settings.MainHeader</a>
                         }
                     </li>
                     @if (AuthSession.User != null && AuthSession.User.Role == "Administrator")
@@ -65,16 +65,16 @@
                         </li>
                     }
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-action="GetProjects" asp-controller="Project">Проекты</a>
+                        <a class="nav-link text-dark" asp-action="GetProjects" asp-controller="Project">@MenuHeaders.Settings.ProjectsHeader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-action="GetServices" asp-controller="Service">Услуги</a>
+                        <a class="nav-link text-dark" asp-action="GetServices" asp-controller="Service">@MenuHeaders.Settings.ServicesHeader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-action="GetBlogs" asp-controller="Blog">Блог</a>
+                        <a class="nav-link text-dark" asp-action="GetBlogs" asp-controller="Blog">@MenuHeaders.Settings.BlogHeader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-action="GetContacts" asp-controller="Contact">Контакты</a>
+                        <a class="nav-link text-dark" asp-action="GetContacts" asp-controller="Contact">@MenuHeaders.Settings.ContactsHeader</a>
                     </li>
                 </ul>
             </div>

@@ -105,6 +105,7 @@
                 Grid.Row="10"
                 Margin="5"
                 Content="Обновить заголовки"
-                FontSize="18"/>
+                FontSize="18"
+                Click="UpdateBut_OnClick"/>
     </Grid>
 </Page>

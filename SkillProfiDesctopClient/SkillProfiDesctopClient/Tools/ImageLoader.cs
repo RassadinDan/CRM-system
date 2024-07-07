@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelLibrary.Projects;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,7 +33,9 @@ namespace SkillProfiDesctopClient.Tools
 		{
 			Stream stream = image.StreamSource;
 			byte[] imagebyte = null;
-			if (stream != null && stream.Length > 0)
+			Console.WriteLine(stream != null);
+
+            if (stream != null && stream.Length > 0)
 			{
 				using (BinaryReader br = new BinaryReader(stream))
 				{

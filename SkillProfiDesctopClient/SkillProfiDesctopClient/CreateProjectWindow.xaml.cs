@@ -31,6 +31,7 @@ namespace SkillProfiDesctopClient
         private HttpClient client;
         private ProjectDataService _projectData;
         private byte[] imageBytes;
+        private string _fileName;
         public CreateProjectWindow()
         {
             InitializeComponent();
@@ -45,10 +46,22 @@ namespace SkillProfiDesctopClient
             if(fileDialog.ShowDialog() == true)
             {
                 string fileName = fileDialog.FileName;
+                _fileName = fileName;
+                Stream stream = fileDialog.OpenFile();
+
+                if (stream != null && stream.Length > 0)
+                {
+                    using (BinaryReader br = new BinaryReader(stream))
+                    {
+                        imageBytes =  br.ReadBytes((Int32)stream.Length);
+                    }
+                }
+
                 var image = new BitmapImage(new Uri(fileName));
                 ProjectImage.Source = image;
 
-                imageBytes = ImageLoader.ByteFromBitmapImage(image);
+                //imageBytes = ImageLoader.ByteFromBitmapImage(image);
+                Console.WriteLine(imageBytes.Length);
 			}
 		}
 
@@ -60,9 +73,13 @@ namespace SkillProfiDesctopClient
                 {
                     Preview = PreviewBox.Text,
                     Description = DescriptionBox.Text,
-                    ImageData = imageBytes
+                    ImageData = imageBytes,
+                    ImageDataUrl = _fileName
                 };
-                bool res = await _projectData.CreateProjectAsync(model);
+                string extension = System.IO.Path.GetExtension(_fileName);
+                model.ImageContentType = MimeTypesHelper.GetContentType(extension);
+                Console.WriteLine(model.ImageData.Length);
+                bool res = await _projectData.CreateAsync(model);
                 if (res)
                 {
                     MessageBox.Show("Проект успешно сохранен.", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);

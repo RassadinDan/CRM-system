@@ -30,33 +30,36 @@ namespace SkillProfiWebAPI.Data
 
 		public async Task CreateProjectAsync(ProjectModel model)
 		{
-			var project = new Project()
-			{
-				Preview = model.Preview,
-				Description = model.Description
-			};
+			Console.WriteLine($"{model.Preview}\n{model.Description}\n{model.ImageContentType}\n{model.ImageDataUrl}\n{model.ImageData}");
+			//var project = new Project()
+			//{
+			//	Preview = model.Preview,
+			//	Description = model.Description
+			//};
 			if(model.ImageFile != null)
 			{
 				using(var memoryStream = new MemoryStream())
 				{
 					await model.ImageFile.CopyToAsync(memoryStream);
-					project.ImageData = memoryStream.ToArray();
-					project.ImageContentType = model.ImageFile.ContentType;
+					model.ImageData = memoryStream.ToArray();
+					model.ImageContentType = model.ImageFile.ContentType;
 				}
 			}
-			if (model.ImageData != null)
-			{
-				project.ImageData = model.ImageData;
-			}
-			_db.Projects.Add(project);
+			//if (model.ImageData != null)
+			//{
+			//	project.ImageData = model.ImageData;
+			//}
+			_db.Projects.Add(model);
 			_db.SaveChanges();
 		}
 
 		public async Task UpdateProjectAsync(int id, ProjectModel model)
 		{
 			var project = await _db.Projects.FirstOrDefaultAsync(p=>p.Id== id);
-			project.Preview = model.Preview;
-			project.Description = model.Description;
+			project = model;
+
+			//project.Preview = model.Preview;
+			//project.Description = model.Description;
 			if (model.ImageFile != null)
 			{
 				using (var memoryStream = new MemoryStream())

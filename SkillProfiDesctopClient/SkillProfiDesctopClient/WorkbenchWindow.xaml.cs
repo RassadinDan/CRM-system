@@ -31,7 +31,6 @@ namespace SkillProfiDesctopClient
 	public partial class WorkbenchWindow : Window
 	{
 		private UISettingsManager _settingsManager;
-		public MainSettings Settings { get; set; }
 		public WorkbenchWindow()
 		{
 			InitializeComponent();
@@ -47,19 +46,19 @@ namespace SkillProfiDesctopClient
 				WorkbenchBut.Visibility = Visibility.Hidden;
 			}
 
-			Settings = _settingsManager.GetSettings();
-			MainBut.Content = Settings.MainHeader;
-			ProjectsBut.Content = Settings.ProjectsHeader;
-			BlogsBut.Content = Settings.BlogHeader;
-			ServicesBut.Content = Settings.ServicesHeader;
-			ContactsBut.Content = Settings.ContactsHeader;
+			MenuHeaders.Settings = _settingsManager.GetSettings();
+			MainBut.Content = MenuHeaders.Settings.MainHeader;
+			ProjectsBut.Content = MenuHeaders.Settings.ProjectsHeader;
+			BlogsBut.Content = MenuHeaders.Settings.BlogHeader;
+			ServicesBut.Content = MenuHeaders.Settings.ServicesHeader;
+			ContactsBut.Content = MenuHeaders.Settings.ContactsHeader;
 		}
 
 		private void MainBut_OnClick(object sender, RoutedEventArgs e)
 		{
 			if (AuthSession.User.Role == "Administrator")
 			{
-				mainFrame.Navigate(new UpdateUIPage(Settings));
+				mainFrame.Navigate(new UpdateUIPage(MenuHeaders.Settings));
 			}
 			else
 			{

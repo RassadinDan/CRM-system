@@ -17,16 +17,20 @@ namespace SkillProfiWebClient.Controllers
 		private readonly ILogger<AdminController> _logger;
 		private readonly AdminDataService _adminDataService;
 		private readonly UISettingsManager _uiSettingsManager;
-		//private MainSettings _settings;
 
 		public AdminController(ILogger<AdminController> logger, AdminDataService dataService, UISettingsManager settingsManager)
 		{
 			_logger = logger;
 			_adminDataService = dataService;
 			_uiSettingsManager = settingsManager;
-			//_settings = _uiSettingsManager.GetSettings();
+			MenuHeaders.Settings = _uiSettingsManager.GetSettings();
 		}
 
+		[HttpGet("main")]
+		public IActionResult Main()
+		{
+			return View();
+		}
 		[HttpGet("workbench")]
 		public async Task<IActionResult> Workbench()
 		{

@@ -62,6 +62,22 @@ namespace SkillProfiWebAPI.Controllers
 			}
 		}
 
+		[HttpPost("createFromDesc")]
+		[Authorize(Roles = "Administrator")]
+		public async Task<IActionResult> CreateFromDesc([FromBody]ProjectModel model)
+		{
+			try
+			{
+				await _projectRepository.CreateProjectAsync(model);
+				return Ok();
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while creating a project: {ex.Message}" });
+
+            }
+		}
+
 		[HttpPut("updateProject/{id}")]
 		[Authorize(Roles = "Administrator")]
 		[Consumes("multipart/form-data")]
@@ -73,6 +89,21 @@ namespace SkillProfiWebAPI.Controllers
 				return Ok();
 			}
 			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while updating a project: {ex.Message}" });
+			}
+		}
+
+		[HttpPut("updateFromDesc/{id}")]
+		[Authorize(Roles = "Administrator")]
+		public async Task<IActionResult> UpdateFromDesc(int id, [FromBody] ProjectModel model)
+		{
+			try
+			{
+				await _projectRepository.UpdateProjectAsync(id, model);
+				return Ok();
+			}
+			catch (Exception ex)
 			{
 				return BadRequest(new { message = $"Error while updating a project: {ex.Message}" });
 			}
