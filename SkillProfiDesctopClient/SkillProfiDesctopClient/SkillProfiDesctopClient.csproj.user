@@ -44,6 +44,9 @@
     <Compile Update="ServicesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateProjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WorkbenchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -89,6 +92,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ServicesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorkbenchWindow.xaml">

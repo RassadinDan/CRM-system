@@ -59,7 +59,7 @@
                 Grid.Row="6"
                 Margin="5"
                 FontSize="18"
-                Content="Создать проект"
+                Content="Обновить проект"
                 Click="CreateBut_ClickAsync"/>
 
         <Button x:Name="UploadImgBut"
