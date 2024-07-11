@@ -32,10 +32,9 @@
         <TextBlock Grid.Column="1"
            HorizontalAlignment="Center"
            FontSize="24"
-           Text="Новый проект" 
+           Text="Обновить проект" 
            Margin="0,18,0,0" 
-           Grid.RowSpan="2" 
-           Width="158"/>
+           Grid.RowSpan="2"/>
 
         <TextBox x:Name="PreviewBox"
          Grid.Column="1"
@@ -59,8 +58,8 @@
         Grid.Row="6"
         Margin="5"
         FontSize="18"
-        Content="Создать проект"
-        Click="UpdateBut_ClickAsync"/>
+        Content="Обновить проект"
+        Click="UpdateBut_OnClick"/>
 
         <Button x:Name="UploadImgBut"
         Grid.Column="2"

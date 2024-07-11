@@ -63,6 +63,21 @@ namespace SkillProfiWebAPI.Controllers
 			}
 		}
 
+		[HttpPost("createFromDesc")]
+		[Authorize(Roles = "Administrator")]
+		public async Task<IActionResult> CreateFromDesc([FromBody]BlogModel model)
+		{
+			try 
+			{
+				await _blogRepository.CreateBlogAsync(model);
+				return Ok(new { message = "Blog created successfully" });
+			}
+			catch(Exception ex)
+			{
+				return BadRequest(new { message = $"Error while creating blog: {ex.Message}" });
+			}
+		}
+
 		[HttpPut("updateBlog/{id}")]
 		[Authorize(Roles = "Administrator")]
 		[Consumes("multipart/form-data")]
@@ -78,6 +93,21 @@ namespace SkillProfiWebAPI.Controllers
 				return BadRequest(new {message = $"Error while updating blog: {ex.Message}"}) ;
 			}
 		}
+
+		[HttpPut("updateFromDesc/{id}")]
+		[Authorize(Roles = "Administrator")]
+		public async Task<IActionResult> UpdateFromDesc(int id, [FromBody]BlogModel model)
+		{
+            try
+            {
+                await _blogRepository.UpdateBlogAsync(id, model);
+                return Ok(new { message = "Blog update successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = $"Error while updating blog: {ex.Message}" });
+            }
+        }
 
 		[HttpDelete("deleteBlog/{id}")]
 		[Authorize(Roles = "Administrator")]

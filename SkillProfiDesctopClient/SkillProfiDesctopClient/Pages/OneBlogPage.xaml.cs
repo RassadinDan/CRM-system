@@ -33,5 +33,12 @@ namespace SkillProfiDesctopClient.Pages
 			DescriptionBlock.Text = Blog.Description;
 			BlogImage.Source = ImageLoader.LoadImage(Blog.ImageData);
 		}
+
+		private void UpdateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new UpdateBlogWindow(Blog);
+			window.Show();
+		}
+
 	}
 }

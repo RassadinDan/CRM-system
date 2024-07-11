@@ -77,5 +77,13 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
+        <Button x:Name="CreateBut"
+                Grid.Column="3"
+                Grid.Row="3"
+                Margin="5"
+                Content="Создать"
+                FontSize="18"
+                Click="CreateBut_OnClick"/>
     </Grid>
 </Page>

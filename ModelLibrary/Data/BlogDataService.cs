@@ -63,6 +63,14 @@ namespace ModelLibrary.Data
 			}
 		}
 
+		public async Task<bool> CreateAsync(BlogModel model)
+		{
+			var url = "https://localhost:7044/api/blog/createFromDesc";
+			var result = await _httpClient.PostAsJsonAsync(url, model);
+			Console.WriteLine(result.StatusCode.ToString());
+			return result.IsSuccessStatusCode;
+		}
+
 		public async Task<bool> UpdateBlogAsync(int id, BlogModel model)
 		{
 			var url = $"https://localhost:7044/api/blog/updateBlog/{id}";
@@ -87,6 +95,14 @@ namespace ModelLibrary.Data
 				var result = await _httpClient.PutAsync(url, formData);
 				return result.IsSuccessStatusCode;
 			}
+		}
+
+		public async Task<bool> UpadateAsync(int id, BlogModel model)
+		{
+			var url = $"https://localhost:7044/api/blog/updatefromDesc/{id}";
+			var result = await _httpClient.PutAsJsonAsync(url, model);
+			Console.WriteLine(result.StatusCode.ToString());
+			return result.IsSuccessStatusCode;
 		}
 
 		public async Task<bool> DeleteBlogAsync(int id)

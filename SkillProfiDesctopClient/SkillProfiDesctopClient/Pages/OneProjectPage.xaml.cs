@@ -32,5 +32,11 @@ namespace SkillProfiDesctopClient.Pages
 			DescriptionBlock.Text = Project.Description;
 			ProjectImage.Source = ImageLoader.LoadImage(Project.ImageData);
 		}
+
+		private void UpdateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new UpdateProjectWindow(Project);
+			window.Show();
+		}
 	}
 }

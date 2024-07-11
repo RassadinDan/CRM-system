@@ -41,6 +41,12 @@ namespace SkillProfiDesctopClient.Pages
 			};
 		}
 
+		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new CreateBlogWindow();
+			window.Show();
+		}
+
 		public async void Delete(int id)
 		{
 			bool res = await _blogDataService.DeleteBlogAsync(id);

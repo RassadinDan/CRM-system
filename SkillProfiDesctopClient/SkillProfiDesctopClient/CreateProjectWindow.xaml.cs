@@ -28,15 +28,13 @@ namespace SkillProfiDesctopClient
     /// </summary>
     public partial class CreateProjectWindow : Window
     {
-        private HttpClient client;
         private ProjectDataService _projectData;
         private byte[] imageBytes;
         private string _fileName;
         public CreateProjectWindow()
         {
             InitializeComponent();
-            client = Connection.httpClient;
-            _projectData = new ProjectDataService(client);
+            _projectData = new ProjectDataService(Connection.httpClient);
         }
 
 		private void UploadImgBut_Click(object sender, RoutedEventArgs e)

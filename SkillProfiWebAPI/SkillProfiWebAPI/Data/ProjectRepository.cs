@@ -56,10 +56,14 @@ namespace SkillProfiWebAPI.Data
 		public async Task UpdateProjectAsync(int id, ProjectModel model)
 		{
 			var project = await _db.Projects.FirstOrDefaultAsync(p=>p.Id== id);
-			project = model;
+			//project = model;
 
-			//project.Preview = model.Preview;
-			//project.Description = model.Description;
+			project.Preview = model.Preview;
+			project.Description = model.Description;
+			if (model.ImageData != null)
+			{ 
+				project.ImageData = model.ImageData;
+			}
 			if (model.ImageFile != null)
 			{
 				using (var memoryStream = new MemoryStream())

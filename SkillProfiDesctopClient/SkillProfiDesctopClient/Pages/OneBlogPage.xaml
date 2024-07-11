@@ -55,10 +55,11 @@
             Source="{Binding ImageData, TargetNullValue={StaticResource defaultImage}}" Grid.ColumnSpan="2"/>
 
         <Button x:Name="UpdateBut"
-        Grid.Column="2"
-        Grid.Row="6"
-        Margin="5"
-        Content="Обновить"/>
+                Grid.Column="2"
+                Grid.Row="6"
+                Margin="5"
+                Content="Обновить"
+                Click="UpdateBut_OnClick"/>
 
         <Button x:Name="DeleteBut"
         Grid.Column="3"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KlFlFzRWpgc=",
+  "dgSpecHash": "aoPSzxHcEPc=",
   "success": true,
-  "projectFilePath": "D:\\Work\\Homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
+  "projectFilePath": "D:\\work\\homework\\FinalProject\\ModelLibrary\\ModelLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Данька\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
