@@ -78,11 +78,11 @@ namespace SkillProfiDesctopClient
                 bool res = await _blogData.CreateAsync(model);
                 if (res)
                 {
-                    MessageBox.Show("Проект успешно сохранен.", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Блог успешно сохранен.", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка при сохранении проекта", "Внимание", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Ошибка при сохранении блога", "Внимание", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else

@@ -98,6 +98,7 @@ namespace SkillProfiWebAPI.Controllers
 		[Authorize(Roles = "Administrator")]
 		public async Task<IActionResult> UpdateFromDesc(int id, [FromBody]BlogModel model)
 		{
+			Console.WriteLine($"{model.Name}\n{model.Preview}\n{model.Description}");
             try
             {
                 await _blogRepository.UpdateBlogAsync(id, model);

@@ -62,7 +62,6 @@ namespace SkillProfiDesctopClient
                 var image = new BitmapImage(new Uri(fileName));
                 BlogImage.Source = image;
 
-                //imageBytes = ImageLoader.ByteFromBitmapImage(image);
                 Console.WriteLine(imageBytes.Length);
             }
 
@@ -78,21 +77,19 @@ namespace SkillProfiDesctopClient
                     Name = NameBox.Text,
                     Preview = PreviewBox.Text,
                     Description = DescriptionBox.Text,
-                    ImageData = imageBytes,
-                    ImageDataUrl = _fileName
+                    ImageData = imageBytes
                 };
-                //string extension = System.IO.Path.GetExtension(_fileName);
-                //model.ImageContentType = MimeTypesHelper.GetContentType(extension);
 
-                Console.WriteLine(model.ImageData.Length);
-                bool res = await _blogData.CreateAsync(model);
+                Console.WriteLine($"{model.ImageData.Length}");
+                bool res = await _blogData.UpdateAsync(Blog.Id, model);
                 if (res)
                 {
-                    MessageBox.Show("Проект успешно сохранен.", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Блог успешно сохранен.", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка при сохранении проекта", "Внимание", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Ошибка при сохранении блога", "Внимание", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else

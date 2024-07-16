@@ -53,6 +53,15 @@ namespace SkillProfiWebAPI.Data
 			blog.Name = model.Name;
 			blog.Preview = model.Preview;
 			blog.Description = model.Description;
+			Console.WriteLine($"{model.Name}\n{model.Preview}\n{model.Description}");	
+			Console.WriteLine(model.ImageData != null);
+
+
+            if (model.ImageData != null)
+			{ 
+				blog.ImageData = model.ImageData;
+				Console.WriteLine($"{model.ImageData.Length}");
+			}
 
 			if (model.ImageFile != null)
 			{

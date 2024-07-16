@@ -97,11 +97,14 @@ namespace ModelLibrary.Data
 			}
 		}
 
-		public async Task<bool> UpadateAsync(int id, BlogModel model)
+		public async Task<bool> UpdateAsync(int id, BlogModel model)
 		{
-			var url = $"https://localhost:7044/api/blog/updatefromDesc/{id}";
+			var url = $"https://localhost:7044/api/blog/updateFromDesc/{id}";
 			var result = await _httpClient.PutAsJsonAsync(url, model);
-			Console.WriteLine(result.StatusCode.ToString());
+
+			Console.WriteLine($"{model.Name}\n{model.Preview}\n{model.Description}");
+
+            Console.WriteLine(result.StatusCode.ToString());
 			return result.IsSuccessStatusCode;
 		}
 

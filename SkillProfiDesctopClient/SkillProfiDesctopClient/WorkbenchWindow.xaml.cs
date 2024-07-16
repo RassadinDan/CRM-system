@@ -84,9 +84,6 @@ namespace SkillProfiDesctopClient
 
 				if(AuthSession.User.Role == "Administrator")
 				{
-					oneProject.UpdateBut.Click += (s, e) =>
-					{
-					};
 
 					oneProject.DeleteBut.Click += (s, e) =>
 					{
@@ -115,10 +112,6 @@ namespace SkillProfiDesctopClient
 
 				if (AuthSession.User.Role == "Administrator")
 				{
-					oneBlog.UpdateBut.Click += (s, e) =>
-					{
-
-					};
 
 					oneBlog.DeleteBut.Click += (s, e) =>
 					{

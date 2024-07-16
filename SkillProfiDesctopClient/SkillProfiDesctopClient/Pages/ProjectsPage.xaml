@@ -69,7 +69,8 @@
 
                             <StackPanel Grid.Column="1"
                                  Margin="5">
-                                <TextBlock Text="{Binding Preview}"/>
+                                <TextBlock Text="{Binding Preview}"
+                                           TextWrapping="Wrap"/>
                             </StackPanel>
                         </Grid>
                     </Border>
