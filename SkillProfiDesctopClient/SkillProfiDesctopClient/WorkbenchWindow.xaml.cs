@@ -22,6 +22,7 @@ using ModelLibrary.Projects;
 using ModelLibrary.Blogs;
 using SkillProfiDesctopClient.Tools;
 using ModelLibrary.UISettings;
+using ModelLibrary.Contacts;
 
 namespace SkillProfiDesctopClient
 {
@@ -131,6 +132,26 @@ namespace SkillProfiDesctopClient
 		{
 			ContactsPage page = new ContactsPage();
 			mainFrame.Navigate(page);
+			page.ContactsListBox.SelectionChanged += (s, e) =>
+			{
+				Contact contact = page.ContactsListBox.SelectedItem as Contact;
+				OneContactPage oneContact = new OneContactPage(contact);
+				mainFrame.Navigate(oneContact);
+
+				if(AuthSession.User.Role == "Administrator")
+				{
+					oneContact.DeleteBut.Click += (s, e) =>
+					{
+						page.Delete(oneContact.Contact.Id);
+						mainFrame.Navigate(page);
+					};
+				}
+				else
+				{
+					oneContact.UpdateBut.Visibility = Visibility.Hidden;
+					oneContact.DeleteBut.Visibility = Visibility.Hidden;
+				}
+			};
 		}
 
 		private void ServiceBut_OnClick(object sender, RoutedEventArgs e)

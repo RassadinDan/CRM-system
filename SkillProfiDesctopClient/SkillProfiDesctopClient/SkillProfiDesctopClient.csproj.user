@@ -14,6 +14,9 @@
     <Compile Update="CreateProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CreateContactWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\BlogsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +24,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\OneBlogPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OneContactPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\OneProjectPage.xaml.cs">
@@ -50,6 +56,9 @@
     <Compile Update="UpdateBlogWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateContactWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UpdateProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +79,9 @@
     <Page Update="CreateProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="CreateContactWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\BlogsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -77,6 +89,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\OneBlogPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OneContactPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\OneProjectPage.xaml">
@@ -104,6 +119,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateBlogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateContactWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateProjectWindow.xaml">

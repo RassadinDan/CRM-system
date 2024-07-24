@@ -10,41 +10,84 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="103*"/>
             <ColumnDefinition Width="103*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
             <RowDefinition Height="22*"/>
-            <RowDefinition Height="188*"/>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="1"
-                   Margin="10,5"
                    Text="Контакты"
                    FontSize="24"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+                   VerticalAlignment="Center" Height="32" Width="102"/>
 
         <ListBox x:Name="ContactsListBox"
                  Grid.Row="2"
-                 Grid.ColumnSpan="2"
-                 Margin="10">
+                 Grid.ColumnSpan="3"
+                 Margin="10,10,10,10" >
 
-            <ListBox.ItemTemplate>
+            <ListBox.ItemTemplate x:Uid="ItemModel">
                 <DataTemplate>
-                    <TextBlock>
-                        <TextBlock.Text>
-                            <MultiBinding StringFormat="{}{0} {1} {2} {3}">
-                                <Binding Path="Name"/>
-                                <Binding Path="Email"/>
-                                <Binding Path="Address"/>
-                                <Binding Path="Phone"/>
-                            </MultiBinding>
-                        </TextBlock.Text>
-                    </TextBlock>
+                    <StackPanel x:Name="TemplatePanel">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MinWidth="100"/>
+                                <ColumnDefinition MinWidth="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="0"
+                                       FontSize="18">
+                                <TextBlock.Text>
+                                    <Binding Path="Name"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock Grid.Column="1"
+                                       Grid.Row="0"
+                                       FontSize="18">
+                                <TextBlock.Text>
+                                    <Binding Path="Email"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock Grid.Column="0"
+                                       Grid.Row="1"
+                                       FontSize="18">
+                                <TextBlock.Text>
+                                    <Binding Path="Address"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock Grid.Column="1"
+                                       Grid.Row="1"
+                                       FontSize="18">
+                                <TextBlock.Text>
+                                    <Binding Path="Phone"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
+        <Button x:Name="CreateBut"
+                Grid.Column="2"
+                Grid.Row="3"
+                Margin="5,5,10,10"
+                FontSize="18"
+                Content="Создать"
+                Click="CreateBut_OnClick"/>
     </Grid>
 </Page>

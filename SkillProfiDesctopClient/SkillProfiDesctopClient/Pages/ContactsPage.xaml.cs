@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using ModelLibrary.Contacts;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient.Pages
 {
@@ -30,16 +31,38 @@ namespace SkillProfiDesctopClient.Pages
 		public ContactsPage()
 		{
 			InitializeComponent();
-			HttpClient httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_contactData = new ContactDataService(httpClient);
+			_contactData = new ContactDataService(Connection.httpClient);
 
 			Loaded += async (sender, e) =>
 			{
 				IEnumerable<Contact> data = await _contactData.GetContactsAsync();
 				Contacts = new ObservableCollection<Contact>(data);
 				ContactsListBox.ItemsSource = Contacts;
+
+				if(AuthSession.User.Role != "Administrator")
+				{
+					CreateBut.Visibility = Visibility.Hidden;
+				}	
 			};
 		}
+
+		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new CreateContactWindow();
+			window.Show();
+		}
+
+		public async void Delete(int id)
+		{
+			bool res = await _contactData.DeleteContactAsync(id);
+            if (res)
+            {
+                MessageBox.Show("Запись удалена", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 	}
 }

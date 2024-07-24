@@ -3,11 +3,13 @@
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\AuthWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\ContactsWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\CreateBlogWindow.xaml;;
+FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\CreateContactWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\CreateProjectWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\BlogsPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\ContactsPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\NewAppPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\OneBlogPage.xaml;;
+FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\OneContactPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\OneProjectPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\ProjectsPage.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\Pages\ServicesPage.xaml;;
@@ -16,6 +18,7 @@ FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\P
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\RegistrationWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\ServicesWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\UpdateBlogWindow.xaml;;
+FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\UpdateContactWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\UpdateProjectWindow.xaml;;
 FD:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\WorkbenchWindow.xaml;;
 
