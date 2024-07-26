@@ -81,3 +81,7 @@ D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\Pages\OneContactPage.baml
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateContactWindow.g.cs
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateContactWindow.baml
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\CreateServiceWindow.g.cs
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateServiceWindow.g.cs
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\CreateServiceWindow.baml
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateServiceWindow.baml

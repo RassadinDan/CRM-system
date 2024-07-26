@@ -10,7 +10,7 @@ namespace SkillProfiWebAPI.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	[Authorize(Roles = "Administrator")]
+	//[Authorize(Roles = "Administrator")]
 	public class AdminController : ControllerBase
 	{
 		private readonly IApplicationRepository _repository;
@@ -23,34 +23,37 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpGet("getApplications")]
-		public async Task<ActionResult<IEnumerable<Application>>> GetApplications()
+        [Authorize(Roles = "Administrator")]
+        public async Task<ActionResult<IEnumerable<Application>>> GetApplications()
 		{
 			try
 			{
 				var applications = await _repository.GetApplicationsAsync();
 				return Ok(applications);
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
-				return BadRequest(new {message = $"Error while loading application list: {ex.Message}"});
+				return BadRequest(new { message = $"Error while loading application list: {ex.Message}" });
 			}
 		}
 
 		[HttpPost("updateApplicationStatus/{id}")]
-		public async Task<IActionResult> UpdateApplicationStatus(int id, [FromBody]ApplicationStatus status)
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> UpdateApplicationStatus(int id, [FromBody] ApplicationStatus status)
 		{
 			try
 			{
 				await _repository.UpdateStatusAsync(id, status);
-				return Ok(new {message = "Status updated successfully"});
+				return Ok(new { message = "Status updated successfully" });
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				return BadRequest(new { message = $"Error while updating application status: {ex.Message}" });
 			}
 		}
 
 		[HttpGet("getSettings")]
+		[Authorize(Roles = "Administrator, Guest")]
 		public async Task<ActionResult<MainSettings>> GetSettings()
 		{
 			try
@@ -65,7 +68,8 @@ namespace SkillProfiWebAPI.Controllers
 		}
 
 		[HttpPost("updateSettings")]
-		public async Task<IActionResult> UpdateSettings([FromBody]MainSettings newSettings)
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> UpdateSettings([FromBody]MainSettings newSettings)
 		{
 			try
 			{

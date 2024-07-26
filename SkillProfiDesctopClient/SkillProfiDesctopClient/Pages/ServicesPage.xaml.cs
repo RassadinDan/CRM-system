@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using ModelLibrary.Data;
 using ModelLibrary.Services;
 using System.Net.Http.Headers;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient.Pages
 {
@@ -30,15 +31,19 @@ namespace SkillProfiDesctopClient.Pages
 		public ServicesPage()
 		{
 			InitializeComponent();
-			HttpClient httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_serviceData = new ServiceDataService(httpClient);
+			
+			_serviceData = new ServiceDataService(Connection.httpClient);
 			Loaded += async (sender, e) =>
 			{
 				IEnumerable<Service> data = await _serviceData.GetServicesAsync();
 				Services = new ObservableCollection<Service>(data);
 				ServicesListBox.ItemsSource = Services;
 			};
+		}
+
+		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }

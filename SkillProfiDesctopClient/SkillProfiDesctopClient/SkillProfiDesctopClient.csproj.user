@@ -17,6 +17,9 @@
     <Compile Update="CreateContactWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CreateServiceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\BlogsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -62,6 +65,9 @@
     <Compile Update="UpdateProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateServiceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WorkbenchWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -80,6 +86,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CreateContactWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreateServiceWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\BlogsPage.xaml">
@@ -125,6 +134,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateProjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateServiceWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WorkbenchWindow.xaml">
