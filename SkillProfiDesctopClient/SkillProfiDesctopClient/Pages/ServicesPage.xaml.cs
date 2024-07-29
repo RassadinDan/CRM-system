@@ -43,7 +43,14 @@ namespace SkillProfiDesctopClient.Pages
 
 		private void CreateBut_OnClick(object sender, RoutedEventArgs e)
 		{
+			var window = new CreateServiceWindow();
+			window.Show();
+		}
 
+		private void UpdateBut_OnClick(object sender, RoutedEventArgs e) 
+		{
+			var window = new UpdateServiceWindow(ServicesListBox.SelectedItem as Service);
+			window.Show();
 		}
 	}
 }

@@ -29,7 +29,7 @@ namespace SkillProfiDesctopClient
             _serviceData = new ServiceDataService(Connection.httpClient);
         }
 
-        private async void CreateBut_OnCLick(object sender, ExecutedRoutedEventArgs e)
+        private async void CreateBut_OnCLick(object sender, RoutedEventArgs e)
         {
             if (NameBox.Text != null && DescriptionBox.Text != null)
             {

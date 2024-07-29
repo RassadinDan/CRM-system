@@ -49,6 +49,7 @@ namespace SkillProfiDesctopClient
                 if (res) 
                 {
                     MessageBox.Show("Запись службы успешно обновлена", "Отлично", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {

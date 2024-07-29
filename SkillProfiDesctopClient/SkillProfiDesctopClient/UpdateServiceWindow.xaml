@@ -63,10 +63,11 @@
          TextWrapping="Wrap"/>
 
         <Button x:Name="UpdateBut"
-        Grid.Column="3"
-        Grid.Row="5"
-        Margin="10,10,10,10"
-        FontSize="18"
-        Content="Обновить"/>
+                Grid.Column="3"
+                Grid.Row="5"
+                Margin="10,10,10,10"
+                FontSize="18"
+                Content="Обновить"
+                Click="UpdateBut_OnClick"/>
     </Grid>
 </Window>

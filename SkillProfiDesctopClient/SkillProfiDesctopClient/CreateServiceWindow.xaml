@@ -67,6 +67,7 @@
                 Grid.Row="5"
                 Margin="10,10,10,10"
                 FontSize="18"
-                Content="Создать"/>
+                Content="Создать"
+                Click="CreateBut_OnCLick"/>
     </Grid>
 </Window>

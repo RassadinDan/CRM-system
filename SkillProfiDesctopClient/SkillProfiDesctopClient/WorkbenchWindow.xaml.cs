@@ -159,11 +159,11 @@ namespace SkillProfiDesctopClient
 		{
 			ServicesPage page = new ServicesPage();
 			mainFrame.Navigate(page);
-
-			//page.ServicesListBox.SelectionChanged += (s, e) =>
-			//{
-
-			//};
+			if(AuthSession.User.Role != "Administrator")
+			{
+				page.CreateBut.Visibility = Visibility.Hidden;
+				page.UpdateBut.Visibility = Visibility.Hidden;
+			}
 		}
 	}
 }
