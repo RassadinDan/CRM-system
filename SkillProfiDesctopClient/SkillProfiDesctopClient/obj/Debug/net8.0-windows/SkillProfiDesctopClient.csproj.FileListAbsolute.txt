@@ -85,3 +85,5 @@ D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\ob
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateServiceWindow.g.cs
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\CreateServiceWindow.baml
 D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\UpdateServiceWindow.baml
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\SessionWindow.g.cs
+D:\work\homework\finalproject\SkillProfiDesctopClient\SkillProfiDesctopClient\obj\Debug\net8.0-windows\SessionWindow.baml

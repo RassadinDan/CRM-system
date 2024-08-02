@@ -23,6 +23,8 @@ using ModelLibrary.Blogs;
 using SkillProfiDesctopClient.Tools;
 using ModelLibrary.UISettings;
 using ModelLibrary.Contacts;
+using ModelLibrary.Auth;
+using System.IO;
 
 namespace SkillProfiDesctopClient
 {
@@ -53,7 +55,24 @@ namespace SkillProfiDesctopClient
 			BlogsBut.Content = MenuHeaders.Settings.BlogHeader;
 			ServicesBut.Content = MenuHeaders.Settings.ServicesHeader;
 			ContactsBut.Content = MenuHeaders.Settings.ContactsHeader;
+			AuthUserName.Text = AuthSession.User.UserName;
 		}
+
+		private async void LogoutBut_OnClick(object sender, RoutedEventArgs e) 
+		{
+			var auth = new AuthService(Connection.httpClient);
+            bool res = await auth.LogoutAsync();
+            if (res)
+            {
+                var window = new AuthWindow();
+                window.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Что-то пошло не так, попробуйте перезапустить приложение.", "Ошибка при выходе", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
 		private void MainBut_OnClick(object sender, RoutedEventArgs e)
 		{

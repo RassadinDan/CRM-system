@@ -26,20 +26,24 @@
                    Text="Услуги"
                    FontSize="24"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Height="32" Width="73"/>
+                   VerticalAlignment="Center"/>
 
         <ListBox x:Name="ServicesListBox"
                  Grid.Row="2"
-                 Margin="10,10,10,10" Grid.ColumnSpan="3">
+                 Margin="10,10,10,10" Grid.ColumnSpan="3"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Expander Header="{Binding Name}"
-                              Height="50"
+                              MinHeight="50"
                               FontSize="18">
-                        <TextBlock Text="{Binding Description}"
+                        <StackPanel>
+                            <TextBlock Text="{Binding Description}"
                                    FontSize="16"
+                                   Height="Auto"
                                    TextWrapping="Wrap"/>
+                        </StackPanel>
                     </Expander>
                 </DataTemplate>
             </ListBox.ItemTemplate>

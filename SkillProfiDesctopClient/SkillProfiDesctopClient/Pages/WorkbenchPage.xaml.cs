@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SkillProfiDesctopClient.Tools;
 
 namespace SkillProfiDesctopClient.Pages
 {
@@ -26,18 +27,20 @@ namespace SkillProfiDesctopClient.Pages
 	{
 		private AdminDataService _dataService { get; set; }
 		public ObservableCollection<ModelLibrary.Applications.Application> Applications { get; set; }
+
+		private int applicationCount;
 		public WorkbenchPage()
 		{
 			InitializeComponent();
-			var httpClient = new HttpClient();
-			httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AuthSession.Token);
-			_dataService = new AdminDataService(httpClient);
+			_dataService = new AdminDataService(Connection.httpClient);
 
 			Loaded += async (sender, e) =>
 			{
 				var data = await _dataService.GetApplicationsAsync();
 				Applications = new ObservableCollection<ModelLibrary.Applications.Application>(data);
 				ApplicationsListBox.ItemsSource = Applications;
+				applicationCount = Applications.Count;
+				AppsCount.Text = $"Всего заявок: {applicationCount}";
 			};
 		}
 	}

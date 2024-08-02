@@ -9,14 +9,24 @@
       Title="WorkbenchPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="AppsCount"
+                   Margin="10"
+                   FontSize="18"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
         <ListBox x:Name="ApplicationsListBox"
-         Grid.Column="1"
-         Grid.Row="0"
-         Grid.RowSpan="8"
-         Margin="10">
+         Grid.Row="1"
+         Margin="10,10,10,10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock>
+                    <TextBlock FontSize="16"
+                               Height="30">
                         <TextBlock.Text>
                             <MultiBinding StringFormat="{}{0} {1} {2} {3}">
                                 <Binding Path="Name"/>
